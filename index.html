@@ -28,54 +28,84 @@
     <button
       type="button"
       id="navbarBtn"
-      class="fixed flex flex-col justify-between top-5 right-5 h-[22px] z-50"
+      class="fixed flex flex-col justify-between top-5 right-5 h-[22px] z-50 md:hidden"
     >
-      <div id="firstBar" class="w-[30px] h-[3px] bg-primary-400 rounded-full duration-300"></div>
-      <div id="secondBar" class="w-[30px] h-[3px] bg-primary-400 rounded-full duration-300"></div>
-      <div id="thirdBar" class="w-[30px] h-[3px] bg-primary-400 rounded-full duration-300"></div>
+      <div
+        id="firstBar"
+        class="w-[30px] h-[3px] bg-primary-400 rounded-full duration-300"
+      ></div>
+      <div
+        id="secondBar"
+        class="w-[30px] h-[3px] bg-primary-400 rounded-full duration-300"
+      ></div>
+      <div
+        id="thirdBar"
+        class="w-[30px] h-[3px] bg-primary-400 rounded-full duration-300"
+      ></div>
     </button>
 
     <!-- HEADER -->
     <header
       id="header"
-      class="fixed top-0 right-0 flex flex-col w-3/4 h-full pt-20 text-lg duration-300 ease-in-out translate-x-full bg-main font-headers shadow-custom"
+      class="fixed top-0 right-0 flex flex-col w-3/4 h-full pt-20 md:h-[6rem] text-lg md:text-xl duration-300 ease-in-out translate-x-full md:pt-0 md:w-full md:translate-x-0 bg-main font-headers shadow-custom md:shadow-none md:duration-0"
     >
-      <div class="flex flex-col items-center justify-between grow">
+      <div
+        class="flex flex-col items-center justify-between grow md:flex-row md:grid md:grid-cols-12"
+      >
+        <h1 class="hidden md:col-span-2 md:block md:text-center">CALL ME</h1>
         <!-- NAV CONTAINER -->
-        <div class="flex flex-col items-center w-full gap-10">
+        <div class="flex flex-col items-center w-full gap-10 md:col-span-7">
           <div
             role="separator"
-            class="w-[100px] h-[1px] bg-gradient-to-r from-white via-primary-600 to-white"
+            class="w-[100px] h-[1px] bg-gradient-to-r from-white via-primary-600 to-white md:hidden"
           ></div>
 
           <!-- NAVIGATION LINKS -->
           <!-- We want the <a> to take full width so the user can click virtually on the "line" and it will work -->
           <nav class="w-full">
-            <ul class="flex flex-col items-center gap-5">
+            <ul class="flex flex-col items-center gap-5 md:flex-row">
               <li class="w-full text-center">
-                <a href="#" id="navlink" class="block w-full font-semibold text-primary-400">Home</a>
+                <a
+                  href="#"
+                  id="navlink"
+                  class="block w-full font-semibold text-primary-400"
+                  >Home</a
+                >
               </li>
-              <li class="w-full text-center"><a href="#" id="navlink" class="block w-full">Fonctionnement</a></li>
-              <li class="w-full text-center"><a href="#" id="navlink" class="block w-full">Description</a></li>
-              <li class="w-full text-center"><a href="#" id="navlink" class="block w-full">Utilisation</a></li>
+              <li class="w-full text-center">
+                <a href="#" id="navlink" class="block w-full">Fonctionnement</a>
+              </li>
+              <li class="w-full text-center">
+                <a href="#" id="navlink" class="block w-full">Description</a>
+              </li>
+              <li class="w-full text-center">
+                <a href="#" id="navlink" class="block w-full">Utilisation</a>
+              </li>
             </ul>
           </nav>
         </div>
 
-        <div class="flex flex-col items-center w-full gap-10">
-          <button type="button" class="w-3/4 py-1 text-white rounded-lg bg-primary-400">
+        <!-- CONTACT CONTAINER -->
+        <div
+          class="flex flex-col items-center w-full gap-10 md:col-start-11 md:col-end-13"
+        >
+          <button
+            type="button"
+            class="w-3/4 py-1 text-white rounded-lg bg-primary-400 md:w-[150px] hover:bg-primary-600 duration-150"
+          >
             <a href="#" id="navlink">Contact</a>
           </button>
 
           <div
             role="separator"
-            class="w-[100px] h-[1px] bg-gradient-to-r from-white via-primary-600 to-white"
+            class="w-[100px] h-[1px] bg-gradient-to-r from-white via-primary-600 to-white md:hidden"
           ></div>
         </div>
       </div>
 
+      <!-- LEGALS LINKS CONTAINER -->
       <div
-        class="flex flex-col items-center justify-center gap-3 my-5 text-xs font-normal text-secondary-600"
+        class="flex flex-col items-center justify-center gap-3 my-5 text-xs font-normal md:hidden text-secondary-600"
       >
         <a href="#">Mentions Légales</a>
         <div role="separator" class="w-[20px] h-[1px] bg-secondary-600"></div>
@@ -83,157 +113,16 @@
       </div>
     </header>
 
-    <main class="bg-red-200 grow md:pt-[6rem]">
-      <h1>coucou</h1>
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. At et fuga eos
-        mollitia cumque assumenda illum officia? Debitis sint sunt quod
-        consequatur. Iusto similique ad omnis. Eum adipisci omnis fugit aperiam
-        quidem sunt, molestias quibusdam vel molestiae quis sapiente cumque
-        assumenda magni eveniet. Veniam pariatur, excepturi necessitatibus
-        consectetur odit et laudantium nisi eius aliquid officia delectus
-        eligendi natus perspiciatis molestias deserunt quibusdam reiciendis
-        repudiandae nam tempora labore cumque! Vero nisi modi a quo voluptates
-        ipsam cum, molestiae vitae esse quod! Ea modi blanditiis provident! Non
-        eveniet deserunt tenetur possimus sit minima voluptates voluptatibus.
-        Suscipit eum ab odio magnam hic officiis minima corporis tempora
-        temporibus blanditiis magni adipisci perferendis dolore sunt
-        perspiciatis corrupti aut veritatis reprehenderit dolores, culpa modi
-        cum? Sapiente vero nam deserunt nulla repellendus ullam natus, molestiae
-        minima, tenetur similique eligendi voluptatem. Sit magni id atque,
-        praesentium earum temporibus doloremque dolore est corporis! Reiciendis,
-        fugit? Similique quis neque ut debitis quae enim ipsam cumque pariatur
-        saepe, odio tenetur corporis commodi nihil tempora quibusdam, maiores
-        repellat voluptatibus voluptates nesciunt possimus animi obcaecati!
-        Expedita et cum natus. Excepturi quaerat magnam illum doloribus
-        assumenda deserunt unde laborum, earum rerum, placeat voluptas repellat
-        error tenetur perspiciatis perferendis, exercitationem explicabo commodi
-        eaque aut quis. Quia, fugit aut, nulla quaerat laboriosam saepe
-        quibusdam eius repudiandae delectus cum omnis. Dolorem, quae quaerat
-        quibusdam possimus reiciendis rem similique nam asperiores doloribus
-        dicta architecto inventore dolor nobis optio iste, commodi id?
-        Molestiae, quis dignissimos! Omnis exercitationem sed, laborum cumque
-        alias nisi cupiditate in iusto voluptate fuga laboriosam possimus eaque!
-        Hic cumque, ea magnam ipsum sapiente veniam sit in! Autem quis error
-        molestias nobis a voluptas ipsa nihil maiores? Quisquam consequuntur
-        consequatur laboriosam quasi natus, exercitationem, nemo minus
-        temporibus quae dolorem repellat commodi hic dolores quos reprehenderit
-        non vero. Neque nihil aut voluptatem itaque expedita, sunt asperiores!
-        Ut, ratione?
-      </p>
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae
-        minima facere, sequi, velit nemo, sunt magnam eum nobis consectetur
-        tempora voluptates accusamus quia reiciendis recusandae adipisci hic ad
-        laboriosam fugiat quaerat. Mollitia magni hic illum dolorem delectus ab
-        necessitatibus architecto placeat ex. Fugiat sit hic exercitationem
-        aliquam consequuntur non maiores, animi, labore officia vitae commodi
-        laudantium doloribus quae sint, quam velit dolorum delectus repellat!
-        Obcaecati dolorem placeat quos magnam quia! Necessitatibus maxime fugiat
-        libero pariatur facilis voluptatum odio velit distinctio doloribus ea,
-        ullam atque placeat eaque aperiam soluta. Amet magni blanditiis dolore
-        laboriosam aliquam maiores placeat quasi. Rerum, error repellendus?
-        Maiores dolor adipisci incidunt consequuntur deleniti, itaque eligendi,
-        fugiat, numquam modi repudiandae qui enim repellat cumque hic tempore?
-        Quae, nihil! Vitae, culpa enim voluptates excepturi dolorem neque
-        itaque, unde sequi explicabo officiis porro quos modi eum odio natus
-        sapiente sed vel quae earum molestias necessitatibus asperiores alias
-        ab. Quod tempore atque molestias doloremque molestiae sed accusantium
-        eveniet beatae reiciendis culpa dolore ullam corporis impedit fugit amet
-        magni fuga perferendis, praesentium ratione! Hic qui illo totam quos
-        dolores officia explicabo accusantium sunt adipisci unde nihil magni
-        cupiditate rerum, commodi veniam dolorem rem minus saepe dolore nesciunt
-        incidunt perspiciatis voluptatum sit quidem! Sed veniam natus
-        consequuntur vel tenetur quia, in soluta perferendis ea nostrum tempore
-        magnam commodi sint aliquam ab alias ipsam eum debitis temporibus
-        facilis cupiditate, iure laudantium! Corrupti voluptatem minima atque,
-        consequatur quas enim reiciendis debitis suscipit. Dicta, illo. Magni
-        sequi corporis, quia at itaque culpa! Harum, eveniet nobis dolorum alias
-        odit deleniti excepturi iste necessitatibus, et animi labore distinctio
-        error nesciunt quae quo odio aliquam! Consequuntur, rem! Quisquam
-        molestias magni, consequuntur voluptatibus nemo non pariatur voluptas!
-        Porro corporis voluptatem inventore, quaerat dicta officiis commodi
-        architecto quis velit ea sit et totam eaque labore debitis, voluptate
-        eveniet laudantium a, id repellat. Totam asperiores dolorem modi, facere
-        repellendus sint explicabo voluptas facilis placeat est sit veritatis
-        quibusdam ipsum voluptatem tempore non obcaecati. Fugiat accusamus
-        pariatur aperiam at nobis distinctio quaerat dolorum! Maiores possimus
-        nostrum repellendus voluptas error omnis doloremque, dolor nesciunt
-        autem dignissimos soluta obcaecati blanditiis incidunt, vel aperiam?
-        Debitis pariatur libero quia dignissimos ipsam laboriosam quos dolore
-        nobis sunt, perferendis necessitatibus minima facilis doloremque rerum
-        natus! Iusto, recusandae temporibus? Ad nostrum incidunt tempore nemo
-        qui, quod dolorum neque maxime ipsa quos id, illum nam eligendi ratione
-        assumenda molestiae aut. Illum ab vel tempora incidunt delectus quas
-        error, nisi dignissimos qui commodi eius odio alias consequuntur
-        voluptatem perferendis cum mollitia praesentium quo voluptatibus hic
-        aperiam veritatis sapiente? Dignissimos unde aut placeat vel beatae
-        explicabo expedita corrupti deleniti! Quasi sint, illum molestias culpa
-        rem eligendi perspiciatis amet, vero iste esse neque dolor veniam
-        mollitia iusto! Vitae libero ratione quae dolore placeat numquam
-        dignissimos hic porro tempora commodi! Error, magnam ratione
-        voluptatibus, qui voluptate harum ducimus, itaque accusamus reiciendis
-        sapiente doloremque architecto odio eos eveniet vero modi id laborum
-        natus numquam nisi laboriosam porro quidem! Unde, quis facere. Nemo
-        tempora in optio, rerum laborum nihil exercitationem facere adipisci
-        perspiciatis impedit quos porro aspernatur repellat minima voluptatem,
-        dolores ea, accusantium a tenetur. Ipsam pariatur exercitationem saepe
-        voluptatem, quas dicta dolores molestiae rerum aperiam, eaque sapiente
-        dolorem aspernatur quos fugit nisi maiores laudantium quo a iusto magnam
-        est autem labore aliquam natus. Eligendi aliquam possimus numquam
-        accusantium assumenda maxime libero aspernatur, odit minima autem
-        repudiandae expedita eum repellendus voluptatem, pariatur quasi dolor
-        itaque? Magni voluptas vel, fugiat corporis ipsa velit mollitia
-        reiciendis aspernatur ipsam omnis porro ad eius accusamus ullam, et
-        expedita beatae, impedit assumenda adipisci in cum deleniti delectus? Ea
-        enim animi aspernatur sit quasi amet delectus dolores placeat illo!
-        Debitis illo vel quos dicta! Nisi dolorem numquam ducimus optio earum
-        fugit quae officia, laudantium a, dolorum dolore aut nam iste, sint
-        perferendis neque adipisci nemo sunt dolor. Quaerat ipsum, fugit ipsam
-        qui, ad magni reprehenderit quae nesciunt placeat autem corporis
-        explicabo omnis tenetur! Ullam dolores quis ea. Qui quaerat error velit
-        aliquid mollitia quae voluptatum suscipit accusamus doloremque neque
-        placeat nulla, temporibus, quas dignissimos magnam asperiores reiciendis
-        harum animi fugiat, enim iure minus! Sapiente nesciunt dignissimos,
-        perferendis voluptate voluptas autem deleniti, ducimus accusamus ut,
-        magni laboriosam velit rerum? Molestiae possimus nobis repellendus amet
-        est incidunt in rem voluptas quis laudantium maxime, doloremque quidem
-        voluptates maiores totam illo, libero, inventore temporibus. Vero
-        dolorum voluptates beatae similique maxime. Maxime in, numquam quisquam
-        molestiae sunt assumenda esse aliquid consectetur facere, quo, tempore
-        natus voluptatem earum ab itaque error accusamus provident repellat
-        aspernatur nobis vero a? Fugiat explicabo mollitia aperiam laudantium
-        aliquid totam magnam. Reprehenderit odit possimus, hic non mollitia
-        iusto quod at beatae ex accusantium, ad ratione pariatur enim voluptates
-        facilis officia dolorum neque temporibus corrupti quos doloremque natus.
-        Modi vero vitae mollitia ratione beatae hic corporis libero quibusdam
-        itaque inventore at doloremque exercitationem, non, possimus error ipsam
-        sint earum doloribus expedita illo qui officia! Sint quia natus ex
-        cumque deleniti id numquam, odio, totam corrupti enim veritatis eaque
-        unde recusandae repellendus iusto culpa ea. Vero consequatur voluptate
-        suscipit maxime dicta illo eum praesentium odio ad libero voluptatum in
-        distinctio numquam tenetur, magnam, velit unde architecto vel cumque
-        iure quaerat? Qui laborum aliquam, quod at obcaecati sapiente iure culpa
-        voluptas odit quisquam et temporibus laudantium officia, dolorum maiores
-        sunt ratione harum ducimus nesciunt quia fuga? Nobis ab animi repellat
-        fugiat ex repudiandae, officia eius dignissimos porro reprehenderit
-        labore commodi perspiciatis qui quidem aut placeat impedit similique id
-        quae at numquam earum unde excepturi amet. Eligendi impedit maiores
-        iusto quidem nesciunt quasi saepe, et repellat tempore reiciendis non ab
-        vero distinctio vitae quis quo assumenda inventore doloribus accusamus
-        ducimus officiis. Alias, eos dignissimos. Tenetur fuga officia atque
-        perspiciatis nostrum. Atque pariatur optio quo deserunt, temporibus
-        corrupti ea quaerat rerum dolor ipsum iure quam animi, ad cupiditate
-        iusto nemo reiciendis. Obcaecati sit nisi mollitia eos praesentium rem,
-        repellat pariatur corrupti iste reiciendis expedita hic laborum beatae
-        id ipsum quidem minima fuga quos placeat ipsam impedit optio commodi?
-        Tenetur illum sapiente ab minus, aspernatur, ex fugit labore iure, esse
-        consectetur nesciunt voluptatum adipisci cupiditate nisi porro quidem
-        maxime in!
-      </p>
+    <!-- Be careful concerning the padding top. We want it to be the same of the nav height because of its position behavior (fixed) -->
+    <main class="grow md:pt-[6rem] p-4">
+      <!-- HERO SECTION -->
+      <section>
+        <h1>Logo</h1>
+
+      </section>
     </main>
 
-    <footer>
+    <footer class="p-4">
       <p>Je suis un footer</p>
     </footer>
     <script type="module" src="/src/main.ts"></script>
