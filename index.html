@@ -72,20 +72,26 @@
             <ul class="flex flex-col items-center gap-5 md:flex-row">
               <li class="w-full text-center">
                 <a
-                  href="#"
+                  href="#home"
                   id="navlink"
                   class="block w-full font-semibold text-primary-400"
                   >Home</a
                 >
               </li>
               <li class="w-full text-center">
-                <a href="#" id="navlink" class="block w-full">Fonctionnement</a>
+                <a href="#feature" id="navlink" class="block w-full"
+                  >Fonctionnement</a
+                >
               </li>
               <li class="w-full text-center">
-                <a href="#" id="navlink" class="block w-full">Description</a>
+                <a href="#description" id="navlink" class="block w-full"
+                  >Description</a
+                >
               </li>
               <li class="w-full text-center">
-                <a href="#" id="navlink" class="block w-full">Utilisation</a>
+                <a href="#usecase" id="navlink" class="block w-full"
+                  >Utilisation</a
+                >
               </li>
             </ul>
           </nav>
@@ -122,7 +128,7 @@
     <!-- Be careful concerning the padding top. We want it to be the same of the nav height because of its position behavior (fixed) -->
     <main class="grow md:pt-[6rem] p-4">
       <!-- HERO SECTION -->
-      <section class="min-h-[95vh] relative">
+      <section id="home" class="min-h-[95vh] relative">
         <h2 class="italic">CALL ME</h2>
 
         <img
@@ -155,6 +161,7 @@
 
       <!-- FEATURE SECTION -->
       <section
+        id="feature"
         class="relative px-5 py-10 mt-6 overflow-hidden rounded-lg shadow-section"
       >
         <h2 class="text-center text-gradient">Fonctionnement</h2>
@@ -207,25 +214,24 @@
 
         <!-- RELAY CONTAINER -->
         <div class="relative w-3/4 mx-auto">
-          
           <div class="relative mx-auto w-fit">
             <!-- ANIMATION PULSE -->
             <div
-              class="absolute border-2 border-primary-400 border-solid w-[75px] aspect-square rounded-full left-[10%] pulse__animate delay1 opacity-0"
+              class="absolute border-[1px] border-primary-400 border-solid w-[75px] aspect-square rounded-full left-[10%] pulse__animate delay1 opacity-0"
             >
               <div
                 class="absolute bottom-0 w-full h-full rounded-lg top-3/4 bg-main"
               ></div>
             </div>
             <div
-              class="absolute border-2 border-primary-400 border-solid w-[75px] aspect-square rounded-full left-[10%] pulse__animate delay2 opacity-0"
+              class="absolute border-[1px] border-primary-400 border-solid w-[75px] aspect-square rounded-full left-[10%] pulse__animate delay2 opacity-0"
             >
               <div
                 class="absolute bottom-0 w-full h-full rounded-lg top-3/4 bg-main"
               ></div>
             </div>
             <div
-              class="absolute border-2 border-primary-400 border-solid w-[75px] aspect-square rounded-full left-[10%] pulse__animate delay3 opacity-0"
+              class="absolute border-[1px] border-primary-400 border-solid w-[75px] aspect-square rounded-full left-[10%] pulse__animate delay3 opacity-0"
             >
               <div
                 class="absolute bottom-0 w-full h-full rounded-lg top-3/4 bg-main"
@@ -246,6 +252,80 @@
             Relai offrant une meilleure couverture réseau.
           </p>
         </div>
+      </section>
+
+      <!-- DESCRIPTION SECTION -->
+      <section id="description" class="mt-6 min-h-[95vh]">
+        <h2 class="mb-5 text-center text-gradient">Description</h2>
+
+        <div class="grid items-center grid-cols-12">
+
+          <!-- TACTILE -->
+          <article class="col-start-1 col-end-6 p-5 rounded-lg shadow-section">
+            <h3 class="flex items-center gap-3 text-lg text-center">
+              <img
+                src="src/assets/icons/tactil.png"
+                alt="Tactile Icon"
+                class="w-[25px] aspect-square"
+              />Tactile
+            </h3>
+            <p class="text-sm text-center">
+              Écran ultra plat, design moderne, tactile pour une utilisation
+              simple.
+            </p>
+          </article>
+  
+          <!-- WATERPROOF -->
+          <article class="col-start-7 col-end-13 p-5 rounded-lg translate-y-3/4 shadow-section">
+            <h3 class="flex items-center gap-3 text-lg text-center">
+              <img
+                src="src/assets/icons/water_drop.png"
+                alt="Tactile Icon"
+                class="w-[25px]"
+              />Résistant à l'eau
+            </h3>
+            <p class="text-sm text-center">
+              Adaptée à toute situation, en particulier en milieu humide. Son
+              étanchéité permet une résistance à l&apos;eau sans égale.
+            </p>
+          </article>
+  
+          <img
+            src="src/assets/images/watch_SB700_profil.webp"
+            alt="Montre de profil"
+            class="w-[125px] col-start-2 col-end-6 my-10"
+          />
+
+          <!-- DATA SAVE -->
+          <article class="col-start-1 col-end-8 p-5 mt-5 rounded-lg shadow-section">
+            <h3 class="flex items-center gap-3 text-lg text-center">
+              <img
+                src="src/assets/icons/save.png"
+                alt="Tactile Icon"
+                class="w-[25px]"
+              />Sauvegarde des données
+            </h3>
+            <p class="text-sm text-center">
+              Enregistrement des données pertinentes favorisant une meilleure prise de décision.
+            </p>
+          </article>
+
+          <!-- SETTINGS -->
+          <article class="col-start-5 col-end-13 p-5 mt-5 rounded-lg shadow-section">
+            <h3 class="flex items-center gap-3 text-lg text-center">
+              <img
+                src="src/assets/icons/gear.png"
+                alt="Tactile Icon"
+                class="w-[25px]"
+              />Paramétrable
+            </h3>
+            <p class="text-sm text-center">
+              Enregistrement des données pertinentes favorisant une meilleure prise de décision.
+            </p>
+          </article>
+        </div>
+
+        <em class="flex float-right gap-2 mt-4 text-sm italic text-secondary-600"><img src="src/assets/icons/light_info.svg" alt="Info icon"> Voir plus</em>
       </section>
     </main>
 
