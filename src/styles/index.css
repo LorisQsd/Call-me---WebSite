@@ -19,6 +19,9 @@
     -webkit-appearance: none;
     margin: 0;
   }
+  h1 {
+    @apply font-headers;
+  }
 }
 
 /* Scroll Bar Style */

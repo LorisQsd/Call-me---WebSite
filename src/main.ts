@@ -20,7 +20,7 @@ const handleNavbar = () => {
   firstBar?.classList.toggle("translate-y-[9px]")
   secondBar?.classList.toggle("opacity-0")
   thirdBar?.classList.toggle("-rotate-45")
-  thirdBar?.classList.toggle("-translate-y-[10px]")
+  thirdBar?.classList.toggle("-translate-y-[9px]")
 }
 
 navLinks.forEach((link) => {
