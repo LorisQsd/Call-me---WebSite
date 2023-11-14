@@ -1,0 +1,25 @@
+.pulse__animate {
+    animation: 2s infinite ease pulse_animation;
+}
+
+.delay1 {
+    animation-delay: 500ms;
+}
+
+.delay2 {
+    animation-delay: 1s;
+}
+
+.delay3 {
+    animation-delay: 1.5s;
+}
+
+@keyframes pulse_animation {
+    from {
+        opacity: 100%;
+        transform: scale(0);
+    } to {
+        opacity: 0;
+        transform: scale(2);
+    }
+}
