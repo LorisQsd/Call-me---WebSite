@@ -89,6 +89,11 @@
                 >
               </li>
               <li class="w-full text-center">
+                <a href="#autonomy" id="navlink" class="block w-full"
+                  >Autonomie</a
+                >
+              </li>
+              <li class="w-full text-center">
                 <a href="#usecase" id="navlink" class="block w-full"
                   >Utilisation</a
                 >
@@ -255,13 +260,12 @@
       </section>
 
       <!-- DESCRIPTION SECTION -->
-      <section id="description" class="mt-6 min-h-[95vh]">
+      <section id="description" class="mt-6">
         <h2 class="mb-5 text-center text-gradient">Description</h2>
 
         <div class="grid items-center grid-cols-12">
-
           <!-- TACTILE -->
-          <article class="col-start-1 col-end-6 p-5 rounded-lg shadow-section">
+          <aside class="col-start-1 col-end-6 p-5 rounded-lg shadow-section">
             <h3 class="flex items-center gap-3 text-lg text-center">
               <img
                 src="src/assets/icons/tactil.png"
@@ -273,10 +277,12 @@
               Écran ultra plat, design moderne, tactile pour une utilisation
               simple.
             </p>
-          </article>
-  
+          </aside>
+
           <!-- WATERPROOF -->
-          <article class="col-start-7 col-end-13 p-5 rounded-lg translate-y-3/4 shadow-section">
+          <aside
+            class="col-start-7 col-end-13 p-5 rounded-lg translate-y-3/4 shadow-section"
+          >
             <h3 class="flex items-center gap-3 text-lg text-center">
               <img
                 src="src/assets/icons/water_drop.png"
@@ -288,8 +294,8 @@
               Adaptée à toute situation, en particulier en milieu humide. Son
               étanchéité permet une résistance à l&apos;eau sans égale.
             </p>
-          </article>
-  
+          </aside>
+
           <img
             src="src/assets/images/watch_SB700_profil.webp"
             alt="Montre de profil"
@@ -297,7 +303,9 @@
           />
 
           <!-- DATA SAVE -->
-          <article class="col-start-1 col-end-8 p-5 mt-5 rounded-lg shadow-section">
+          <aside
+            class="col-start-1 col-end-8 p-5 mt-5 rounded-lg shadow-section"
+          >
             <h3 class="flex items-center gap-3 text-lg text-center">
               <img
                 src="src/assets/icons/save.png"
@@ -306,12 +314,15 @@
               />Sauvegarde des données
             </h3>
             <p class="text-sm text-center">
-              Enregistrement des données pertinentes favorisant une meilleure prise de décision.
+              Enregistrement des données pertinentes favorisant une meilleure
+              prise de décision.
             </p>
-          </article>
+          </aside>
 
           <!-- SETTINGS -->
-          <article class="col-start-5 col-end-13 p-5 mt-5 rounded-lg shadow-section">
+          <aside
+            class="col-start-5 col-end-13 p-5 mt-5 rounded-lg shadow-section"
+          >
             <h3 class="flex items-center gap-3 text-lg text-center">
               <img
                 src="src/assets/icons/gear.png"
@@ -320,12 +331,69 @@
               />Paramétrable
             </h3>
             <p class="text-sm text-center">
-              Enregistrement des données pertinentes favorisant une meilleure prise de décision.
+              Enregistrement des données pertinentes favorisant une meilleure
+              prise de décision.
             </p>
-          </article>
+          </aside>
         </div>
 
-        <em class="flex float-right gap-2 mt-4 text-sm italic text-secondary-600"><img src="src/assets/icons/light_info.svg" alt="Info icon"> Voir plus</em>
+        <em
+          class="flex float-right gap-2 mt-4 text-sm italic text-secondary-600"
+          ><img src="src/assets/icons/light_info.svg" alt="Info icon" /> Voir
+          plus</em
+        >
+      </section>
+
+      <!-- AUTONOMY SECTION -->
+      <section
+        id="autonomy"
+        class="relative px-5 py-10 mt-16 overflow-hidden rounded-lg shadow-section"
+      >
+        <h2 class="mb-5 text-center text-gradient">Autonomie Puissante</h2>
+
+        <!-- IMAGE CONTAINER -->
+        <div class="flex items-center">
+          <div class="relative w-1/2">
+            <img
+              src="src/assets/images/watch_SB700_face_1.webp"
+              alt="Montre de face"
+              class="w-[85px] drop-shadow-2xl mx-auto"
+            />
+            <img
+              src="src/assets/icons/demi_circle.svg"
+              alt="Demi cercle"
+              class="absolute -top-[40%] left-1/2 -translate-x-full"
+            />
+          </div>
+
+          <!-- CONTENT CONTAINER -->
+          <div class="w-1/2">
+            <p class="text-sm">
+              La durée de fonctionnement de notre montre s&apos;étend à environ
+              8 heures. Vous n&apos;aurez que très peu de soucis à vous faire
+              quant à la batterie.
+            </p>
+            <p class="mt-4 text-sm">
+              Vous avez oublié de mettre en charge votre montre la veille ?
+              Aucun soucis, son système de recharge rapide permettra de rendre
+              le dispositif à nouveau opérationnel en un temps record !
+            </p>
+          </div>
+        </div>
+
+        <!-- ICONS CONTAINER -->
+        <div class="flex mt-10 justify-evenly">
+          <div class="w-1/2">
+            <img src="src/assets/icons/clock.svg" alt="Clock Icon" class="m-auto mb-4 w-[75px]">
+            <h3 class="text-center">8 heures</h3>
+          </div>
+
+          <div class="w-1/2">
+            <img src="src/assets/icons/lightning.svg" alt="Lightning Icon" class="m-auto mb-4 w-[45px] mt-2">
+            <h3 class="text-center">Rechargement rapide</h3>
+          </div>
+        </div>
+
       </section>
     </main>
 
