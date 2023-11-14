@@ -28,6 +28,9 @@
   h2 {
     @apply text-3xl
   }
+  p {
+    @apply font-medium text-secondary-800
+  }
 }
 
 .text-gradient {
