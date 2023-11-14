@@ -32,6 +32,9 @@
   p {
     @apply font-medium text-secondary-800
   }
+  input[type="text"], input[type="email"]{
+    @apply p-2 border-[1px] border-black rounded-lg focus:ring-4 ring-offset-2 ring-primary-200 duration-150
+  }
 }
 
 .text-gradient {
