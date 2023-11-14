@@ -13,7 +13,7 @@ const handleNavbar = () => {
   const headerElement = document.getElementById('header');
 
   // Toggler
-  headerElement?.classList.toggle('translate-x-0');
+  headerElement?.classList.toggle('translate-x-[0px]');
   isNavbarOpen = !isNavbarOpen;
   
   firstBar?.classList.toggle("rotate-45")

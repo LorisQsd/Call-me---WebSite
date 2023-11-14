@@ -25,8 +25,10 @@
   </head>
   <body class="flex flex-col bg-main">
     <!-- Empty div to render necessary classes for tailwin when it is added through a script -->
-    <div class="hidden rotate-45 translate-x-0 opacity-0 translate-y-[9px]"></div>
-    <div class="-rotate-45 -translate-y-[9px]"></div>
+    <div
+      class="hidden rotate-45 translate-x-[0px] opacity-0 translate-y-[9px]"
+    ></div>
+    <div class="hidden -rotate-45 -translate-y-[9px]"></div>
     <!-- NAVBAR BTN -->
     <button
       type="button"
@@ -42,8 +44,8 @@
         class="w-[30px] h-[3px] bg-primary-400 rounded-full duration-300"
       ></div>
       <div
-      id="thirdBar"
-      class="w-[30px] h-[3px] bg-primary-400 rounded-full duration-300"
+        id="thirdBar"
+        class="w-[30px] h-[3px] bg-primary-400 rounded-full duration-300"
       ></div>
     </button>
 
@@ -119,12 +121,44 @@
     <!-- Be careful concerning the padding top. We want it to be the same of the nav height because of its position behavior (fixed) -->
     <main class="grow md:pt-[6rem] p-4">
       <!-- HERO SECTION -->
-      <section class="min-h-[95vh] bg-red-200">
-        <h1 class="text-2xl italic font-semibold font-headers">CALL ME</h1>
+      <section class="min-h-[95vh] relative">
+        <h2 class="italic">CALL ME</h2>
 
-        <img src="/src/assets/images/watch_SB700_presentation.webp" alt="Montre Call Me" class="w-[200px] drop-shadow-2xl block mx-auto my-10">
+        <img
+          src="/src/assets/images/watch_SB700_presentation.webp"
+          alt="Montre Call Me"
+          class="w-[200px] drop-shadow-2xl block mx-auto my-10"
+        />
 
-        <h1>Solution D'Appel</h1>
+        <h1 class="text-center">Solution D'Appel</h1>
+        <h2 class="my-4 text-center">
+          Efficace,
+          <span
+            class="text-gradient"
+            >Sécurisée</span
+          >
+        </h2>
+
+        <h3
+          class="px-6 mt-10 text-lg italic font-medium tracking-wide text-center text-secondary-800"
+        >
+          Dispositif moderne, sans fil, permettant un contact instantané du
+          personnel selon une situation.
+        </h3>
+
+        <button type="button">
+          <img
+            src="src/assets/icons/double_arrow_down.svg"
+            class="absolute bottom-0 mx-auto -translate-x-1/2 left-1/2"
+            alt="Double flèches vers le bas"
+          />
+        </button>
+      </section>
+
+      <!-- FEATURE SECTION -->
+      <section class="min-h-[95vh] relative mt-6 rounded-lg shadow-section py-10 px-5">
+        <h2 class="text-center text-gradient">Fonctionnement</h2>
+        <h3 class="mt-5 text-lg font-medium text-center text-secondary-800">L’utilisateur peut contacter discrètement un membre du personnel connecté en toute autonomie.</h3>
       </section>
     </main>
 

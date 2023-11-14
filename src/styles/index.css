@@ -19,9 +19,19 @@
     -webkit-appearance: none;
     margin: 0;
   }
-  h1 {
-    @apply font-headers;
+  h1, h2, h3, h4 {
+    @apply font-semibold font-headers;
   }
+  h1 {
+    @apply text-4xl;
+  }
+  h2 {
+    @apply text-3xl
+  }
+}
+
+.text-gradient {
+  @apply text-transparent bg-gradient-to-r from-primary-600 to-primary-200 bg-clip-text
 }
 
 /* Scroll Bar Style */
