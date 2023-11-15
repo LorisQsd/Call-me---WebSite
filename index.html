@@ -413,10 +413,14 @@
         id="autonomy"
         class="relative px-5 py-10 mt-16 overflow-hidden rounded-lg shadow-section xl:mx-20 xl:rounded-3xl"
       >
-        <h2 class="mb-12 text-center text-gradient xl:mb-32">Autonomie Puissante</h2>
+        <h2 class="mb-12 text-center text-gradient xl:mb-32">
+          Autonomie Puissante
+        </h2>
 
         <!-- IMAGE CONTAINER -->
-        <div class="flex items-center mx-auto md:mt-10 md:gap-10 md:w-3/4 xl:w-full xl:pl-16">
+        <div
+          class="flex items-center mx-auto md:mt-10 md:gap-10 md:w-3/4 xl:w-full xl:pl-16"
+        >
           <div class="relative w-1/2 xl:w-1/4">
             <img
               src="src/assets/images/watch_SB700_face_1.webp"
@@ -431,7 +435,9 @@
           </div>
 
           <!-- CONTENT CONTAINER -->
-          <div class="w-1/2 text-sm md:text-base xl:self-start xl:text-lg xl:w-[60%]">
+          <div
+            class="w-1/2 text-sm md:text-base xl:self-start xl:text-lg xl:w-[60%]"
+          >
             <p class="xl:leading-8">
               La durée de fonctionnement de notre montre s&apos;étend à environ
               8 heures. Vous n&apos;aurez que très peu de soucis à vous faire
@@ -446,7 +452,9 @@
         </div>
 
         <!-- ICONS CONTAINER -->
-        <div class="flex mt-10 xl:mx-auto md:mt-14 justify-evenly md:text-xl xl:w-3/4 xl:translate-x-10">
+        <div
+          class="flex mt-10 xl:mx-auto md:mt-14 justify-evenly md:text-xl xl:w-3/4 xl:translate-x-10"
+        >
           <div class="w-1/2">
             <img
               src="src/assets/icons/clock.svg"
@@ -468,12 +476,14 @@
       </section>
 
       <!-- USECASE SECTION -->
-      <section id="usecase" class="min-h-[95vh] mt-6">
+      <section id="usecase" class="min-h-[95vh] mt-6 xl:mt-14">
         <h2 class="text-center text-gradient">Cas d'Utilisation</h2>
 
         <!-- RESTAURANT EXAMPLE -->
-        <article class="md:max-w-[700px] mx-auto">
-          <h3 class="flex items-center justify-center gap-4 my-6 text-2xl">
+        <article class="md:max-w-[700px] xl:max-w-[90%] mx-auto">
+          <h3
+            class="flex items-center justify-center gap-4 my-6 text-2xl xl:text-3xl xl:justify-start"
+          >
             <img
               src="src/assets/icons/restaurant.png"
               alt="Restaurant Icon"
@@ -482,53 +492,65 @@
             Restauration
           </h3>
 
-          <!-- ILLUSTRATION -->
-          <img
-            src="src/assets/images/fonctionnement_global.webp"
-            alt="Restaurant illustration"
-            class="w-[90%] block mx-auto rounded-lg"
-          />
+          <div class="xl:flex xl:gap-16">
+            <!-- ILLUSTRATION -->
+            <img
+              src="src/assets/images/fonctionnement_global.webp"
+              alt="Restaurant illustration"
+              class="w-[90%] block mx-auto rounded-lg xl:rounded-2xl"
+            />
 
-          <!-- CONTAINER -->
-          <div class="flex gap-4 py-6 md:text-xl">
-            <h4
-              class="flex items-center justify-center w-1/2 gap-4 text-center"
-            >
-              Satisfaction client
-              <img
-                src="src/assets/icons/arrow_up.png"
-                alt="Arrow up"
-                class="md:w-[40px]"
-              />
-            </h4>
-            <h4
-              class="flex items-center justify-center w-1/2 gap-4 text-center"
-            >
-              Organisation
-              <img
-                src="src/assets/icons/arrow_up.png"
-                alt="Arrow up"
-                class="md:w-[40px]"
-              />
-            </h4>
+            <!-- CONTAINER -->
+            <div class="xl:flex xl:flex-col">
+              <div class="flex gap-4 py-6 md:text-xl xl:text-2xl">
+                <h4
+                  class="flex items-center justify-center w-1/2 gap-4 text-center"
+                >
+                  Satisfaction client
+                  <img
+                    src="src/assets/icons/arrow_up.png"
+                    alt="Arrow up"
+                    class="md:w-[40px]"
+                  />
+                </h4>
+                <h4
+                  class="flex items-center justify-center w-1/2 gap-4 text-center"
+                >
+                  Organisation
+                  <img
+                    src="src/assets/icons/arrow_up.png"
+                    alt="Arrow up"
+                    class="md:w-[40px]"
+                  />
+                </h4>
+              </div>
+
+              <div
+                class="text-sm text-center md:text-base xl:text-lg xl:text-start"
+              >
+                <p>
+                  Une fois l&apos;ensemble du dispositif mis en place (montre,
+                  bipper, relai si nécessaire), les clients n&apos;auront
+                  qu&apos;à discrètement appuyer sur leur bipper mis à
+                  disposition afin de contacter un serveur pour leur prise de
+                  commande.
+                </p>
+                <p class="mt-4">
+                  Vous augmenterez significativement votre satisfaction client
+                  et gagnerez en efficacité organisationnelle !
+                </p>
+              </div>
+            </div>
           </div>
-          <p class="text-sm text-center md:text-base">
-            Une fois l&apos;ensemble du dispositif mis en place (montre, bipper,
-            relai si nécessaire), les clients n&apos;auront qu&apos;à
-            discrètement appuyer sur leur bipper mis à disposition afin de
-            contacter un serveur pour leur prise de commande.
-          </p>
-          <p class="mt-4 text-sm text-center md:text-base">
-            Vous augmenterez significativement votre satisfaction client et
-            gagnerez en efficacité organisationnelle !
-          </p>
         </article>
 
         <!-- SCHOOL EXAMPLE -->
         <article
-          class="flex flex-col items-center justify-center gap-4 mt-4 md:max-w-[700px] mx-auto"
+          class="flex flex-col items-center justify-center gap-4 mt-4 md:max-w-[700px] mx-auto xl:max-w-[90%]"
         >
-          <h3 class="flex items-center justify-center gap-4 text-2xl">
+          <h3
+            class="flex items-center justify-center gap-4 text-2xl xl:text-3xl xl:self-end"
+          >
             École
             <img
               src="src/assets/icons/atom.png"
@@ -537,29 +559,33 @@
             />
           </h3>
 
-          <!-- ILLUSTRATION -->
-          <img
-            src="src/assets/images/school.webp"
-            alt="School illustration"
-            class="w-[90%] block mx-auto rounded-lg"
-          />
-
-          <h4
-            class="flex items-center justify-center w-1/2 gap-2 text-center md:text-xl"
-          >
-            Sécurité
+          <div class="xl:flex xl:flex-row-reverse xl:gap-16">
+            <!-- ILLUSTRATION -->
             <img
-              src="src/assets/icons/shield.png"
-              alt="Shield icon"
-              class="md:w-[40px]"
+              src="src/assets/images/school.webp"
+              alt="School illustration"
+              class="w-[90%] block mx-auto rounded-lg xl:rounded-2xl"
             />
-          </h4>
 
-          <p class="text-sm text-center md:text-base">
-            Le corps enseignant peut parfois ne pas se sentir totalement en
-            sécurité. Une simple pression sur leur bipper pourrait contacter le
-            personnel compétent afin de demander une intervention.
-          </p>
+            <div class="xl:flex xl:flex-col xl:gap-4">
+              <h4
+                class="flex items-center justify-center w-1/2 gap-2 text-center md:text-xl xl:text-2xl xl:w-fit"
+              >
+                Sécurité
+                <img
+                  src="src/assets/icons/shield.png"
+                  alt="Shield icon"
+                  class="md:w-[40px]"
+                />
+              </h4>
+
+              <p class="text-sm text-center md:text-base xl:text-lg xl:text-start">
+                Le corps enseignant peut parfois ne pas se sentir totalement en
+                sécurité. Une simple pression sur leur bipper pourrait contacter
+                le personnel compétent afin de demander une intervention.
+              </p>
+            </div>
+          </div>
         </article>
       </section>
 
