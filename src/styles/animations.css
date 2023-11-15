@@ -37,3 +37,9 @@
         transform: translateY(-2%);
     }
 }
+
+@media screen and (min-width: 1280px) {
+    #watch {
+        animation: 4s infinite alternate ease-in-out levitate_animation;
+    }
+}

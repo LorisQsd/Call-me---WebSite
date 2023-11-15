@@ -145,6 +145,7 @@
             src="/src/assets/images/watch_SB700_presentation.webp"
             alt="Montre Call Me"
             class="w-[225px] md:w-[300px] xl:w-[450px] drop-shadow-2xl block mx-auto py-[10vh] relative z-10"
+            id="watch"
           />
           <!-- ELLIPSE -->
           <div
@@ -196,30 +197,30 @@
       <!-- FEATURE SECTION -->
       <section
         id="feature"
-        class="relative px-5 py-10 mt-6 overflow-hidden rounded-lg shadow-section"
+        class="relative px-5 py-10 mt-6 overflow-hidden rounded-lg shadow-section xl:mx-20 xl:rounded-3xl"
       >
         <h2 class="text-center text-gradient">Fonctionnement</h2>
         <h3
-          class="mt-5 text-lg font-medium text-center md:max-w-[75%] mx-auto md:text-xl text-secondary-800"
+          class="mt-5 text-lg font-medium text-center md:max-w-[75%] xl:max-w-[50%] mx-auto md:text-xl text-secondary-800"
         >
           L&apos;utilisateur peut contacter discrètement un membre du personnel
           connecté en toute autonomie.
         </h3>
 
         <!-- BIPPER & WATCH CONTAINER -->
-        <div class="grid grid-cols-12 mt-10 md:text-base justify-items-center">
+        <div class="grid grid-cols-12 mt-10 md:text-base xl:text-lg justify-items-center xl:mt-20">
           <!-- BIPPER CONTAINER -->
-          <div class="col-span-5 md:col-start-2 md:col-end-6">
+          <div class="col-span-5 md:col-start-2 md:col-end-6 xl:col-start-3 xl:col-end-5">
             <div class="relative m-auto w-fit">
               <!-- INFO ICON -->
               <img
                 src="src/assets/icons/light_info.svg"
                 alt="info icon"
-                class="absolute -top-2 -right-2 md:w-[20px]"
+                class="absolute -top-2 -right-2 md:w-[20px] cursor-pointer z-10 xl:w-[25px]"
               />
               <img
                 src="src/assets/images/ST3002_BIP_1.webp"
-                class="w-[75px] md:w-[100px] drop-shadow-2xl mb-5"
+                class="w-[75px] md:w-[100px] xl:w-[150px] drop-shadow-2xl mb-5"
                 alt="Bipper"
               />
             </div>
@@ -228,18 +229,25 @@
             </p>
           </div>
 
+          <!-- WIFI ICON -->
           <img
             src="src/assets/icons/ondes.svg"
             alt="Ondes"
-            class="col-span-2 mt-8 md:col-start-6 md:col-end-8"
+            class="col-span-2 mt-8 md:col-start-6 md:col-end-8 xl:col-start-5 xl:col-end-6 xl:w-[50px]"
+          />
+
+          <img
+            src="src/assets/icons/ondes.svg"
+            alt="Ondes"
+            class="hidden mt-8 xl:block xl:col-start-8 xl:col-end-9 xl:w-[50px]"
           />
 
           <!-- WATCH CONTAINER -->
-          <div class="col-span-5 md:col-start-8 md:col-end-11">
+          <div class="col-span-5 md:col-start-8 md:col-end-11 xl:col-start-9 xl:col-end-11">
             <img
               src="src/assets/images/watch_SB700_face_1.webp"
               alt="Montre de face"
-              class="w-[60px] md:w-[80px] mb-2 mx-auto drop-shadow-2xl"
+              class="w-[60px] md:w-[80px] mb-2 mx-auto drop-shadow-2xl xl:w-[120px]"
             />
 
             <p class="text-center">
@@ -250,43 +258,44 @@
         </div>
 
         <!-- RELAY CONTAINER -->
-        <div class="relative w-3/4 mx-auto">
+        <div class="relative w-3/4 mx-auto xl:-mt-14">
           <div class="relative mx-auto w-fit">
             <!-- ANIMATION PULSE -->
             <div
-              class="absolute border-[1px] border-primary-400 border-solid w-[75px] md:w-[125px] aspect-square rounded-full left-[10%] pulse__animate delay1 opacity-0"
+              class="absolute border-[1px] border-primary-400 border-solid w-[75px] md:w-[125px] xl:w-[175px] aspect-square rounded-full left-[10%] pulse__animate delay1 opacity-0"
             >
               <div
                 class="absolute bottom-0 w-full h-full rounded-lg top-3/4 bg-main"
               ></div>
             </div>
             <div
-              class="absolute border-[1px] border-primary-400 border-solid w-[75px] md:w-[125px] aspect-square rounded-full left-[10%] pulse__animate delay2 opacity-0"
+              class="absolute border-[1px] border-primary-400 border-solid w-[75px] md:w-[125px] xl:w-[175px] aspect-square rounded-full left-[10%] pulse__animate delay2 opacity-0"
             >
               <div
                 class="absolute bottom-0 w-full h-full rounded-lg top-3/4 bg-main"
               ></div>
             </div>
             <div
-              class="absolute border-[1px] border-primary-400 border-solid w-[75px] md:w-[125px] aspect-square rounded-full left-[10%] pulse__animate delay3 opacity-0"
+              class="absolute border-[1px] border-primary-400 border-solid w-[75px] md:w-[125px] xl:w-[175px] aspect-square rounded-full left-[10%] pulse__animate delay3 opacity-0"
             >
               <div
                 class="absolute bottom-0 w-full h-full rounded-lg top-3/4 bg-main"
               ></div>
             </div>
+            <!-- RELAY IMAGE -->
             <img
               src="src/assets/images/relai_hq_1.webp"
               alt="Relai"
-              class="drop-shadow-2xl w-[100px] md:w-[150px] mt-[8vh]"
+              class="drop-shadow-2xl w-[100px] md:w-[150px] mt-[8vh] xl:w-[225px]"
             />
             <!-- INFO ICON -->
             <img
               src="src/assets/icons/light_info.svg"
               alt="info icon"
-              class="absolute -top-2 -right-2 md:w-[20px]"
+              class="absolute -top-2 xl:-top-4 xl:-right-4 -right-2 md:w-[20px] cursor-pointer z-10 xl:w-[25px]"
             />
           </div>
-          <p class="relative mt-2 text-sm text-center md:mt-5 md:text-lg">
+          <p class="relative mx-auto mt-2 text-sm text-center md:mt-5 md:text-base xl:text-lg xl:w-1/4">
             Relai offrant une meilleure couverture réseau.
           </p>
         </div>
@@ -382,7 +391,7 @@
       <!-- AUTONOMY SECTION -->
       <section
         id="autonomy"
-        class="relative px-5 py-10 mt-16 overflow-hidden rounded-lg shadow-section"
+        class="relative px-5 py-10 mt-16 overflow-hidden rounded-lg shadow-section xl:mx-20 xl:rounded-3xl"
       >
         <h2 class="mb-5 text-center text-gradient">Autonomie Puissante</h2>
 
@@ -537,7 +546,7 @@
       <!-- CONTACT SECTION -->
       <section
         id="contact"
-        class="relative px-5 pt-4 pb-10 mt-16 overflow-hidden rounded-lg shadow-section"
+        class="relative px-5 pt-4 pb-10 mt-16 overflow-hidden rounded-lg shadow-section xl:mx-20 xl:rounded-3xl"
       >
         <!-- PHONE INFOS -->
         <p class="flex gap-2 text-sm italic font-semibold text-black">
