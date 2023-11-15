@@ -1,4 +1,11 @@
-// NAVBAR
+// === YEAR GENERATION === //
+const yearElement = document.getElementById('year');
+const currentDate = new Date();
+const currentYear = currentDate.getFullYear();
+
+if (yearElement) yearElement.textContent = currentYear.toString();
+
+// === NAVBAR === //
 let isNavbarOpen = false;
 
 const navbarBtn = document.getElementById('navbarBtn');
@@ -15,30 +22,30 @@ const handleNavbar = () => {
   // Toggler
   headerElement?.classList.toggle('translate-x-full');
   isNavbarOpen = !isNavbarOpen;
-  
-  firstBar?.classList.toggle("rotate-45")
-  firstBar?.classList.toggle("translate-y-[10px]")
-  secondBar?.classList.toggle("opacity-0")
-  thirdBar?.classList.toggle("-rotate-45")
-  thirdBar?.classList.toggle("-translate-y-[9px]")
-}
+
+  firstBar?.classList.toggle('rotate-45');
+  firstBar?.classList.toggle('translate-y-[10px]');
+  secondBar?.classList.toggle('opacity-0');
+  thirdBar?.classList.toggle('-rotate-45');
+  thirdBar?.classList.toggle('-translate-y-[9px]');
+};
 
 navLinks.forEach((link) => {
-    link.addEventListener("click", handleNavbar)
-})
+  link.addEventListener('click', handleNavbar);
+});
 
 navbarBtn?.addEventListener('click', handleNavbar);
 
 // === CONTACT FORM === //
-const contactForm = document.getElementById("contactForm");
+const contactForm = document.getElementById('contactForm');
 
 const handleSubmit = (e: any) => {
   e.preventDefault();
-  
+
   const formData = new FormData(e.currentTarget);
   const formEntries = Object.fromEntries(formData);
 
-  console.log(formEntries)
-}
+  console.log(formEntries);
+};
 
-contactForm?.addEventListener("submit", handleSubmit)
+contactForm?.addEventListener('submit', handleSubmit);
