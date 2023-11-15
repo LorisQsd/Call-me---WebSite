@@ -32,8 +32,12 @@
   p {
     @apply font-medium text-secondary-800
   }
-  input[type="text"], input[type="email"]{
-    @apply p-2 border-[1px] border-black rounded-lg focus:ring-4 ring-offset-2 ring-primary-200 duration-150
+  input[type="text"], input[type="email"], textarea{
+    @apply p-2 border-[1px] border-black rounded-lg focus:ring-4 ring-offset-2 ring-primary-200 duration-150 placeholder:text-sm
+  }
+  label {
+    clip: rect(0, 0, 0, 0);
+    @apply w-[1px] h-[1px] p-0 -m-[1px] overflow-hidden border-0
   }
 }
 
