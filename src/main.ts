@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 // === YEAR GENERATION === //
 const yearElement = document.getElementById('year');
 const currentDate = new Date();
@@ -37,15 +39,27 @@ navLinks.forEach((link) => {
 navbarBtn?.addEventListener('click', handleNavbar);
 
 // === CONTACT FORM === //
-const contactForm = document.getElementById('contactForm');
+const contactForm = document.getElementById('contactForm') as HTMLFormElement;
+const messageElement = document.getElementById('requestMessage');
 
-const handleSubmit = (e: any) => {
+const handleSubmit = async (e: any) => {
   e.preventDefault();
 
   const formData = new FormData(e.currentTarget);
-  const formEntries = Object.fromEntries(formData);
+  const form = Object.fromEntries(formData);
 
-  console.log(formEntries);
+  try {
+    const response = await axios.post('http://localhost:8080/send', form);
+
+    contactForm?.reset();
+
+    if (messageElement)
+      messageElement.textContent =
+        'Votre demande de contact a bien été transmise, nous revenons vers vous au plus vite.';
+    return response.data;
+  } catch (error) {
+    throw new Error(`${error}`);
+  }
 };
 
-contactForm?.addEventListener('submit', handleSubmit);
+contactForm.addEventListener('submit', handleSubmit);
