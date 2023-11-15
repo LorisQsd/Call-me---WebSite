@@ -1,3 +1,4 @@
+/* PULSE */
 .pulse__animate {
     animation: 2s infinite ease pulse_animation;
 }
@@ -21,5 +22,18 @@
     } to {
         opacity: 0;
         transform: scale(2);
+    }
+}
+
+/* LEVITATE */
+.levitate__animate {
+    animation: 4s infinite alternate ease-in-out levitate_animation;
+}
+
+@keyframes levitate_animation {
+    from {
+        transform: translateY(0);
+    } to {
+        transform: translateY(-2%);
     }
 }
