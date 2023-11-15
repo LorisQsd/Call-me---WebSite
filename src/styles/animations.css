@@ -1,45 +1,207 @@
+/* HERO SECTION */
+/* SLIDE LEFT */
+.slide-left__animate {
+  animation: 0.25s forwards ease-in-out slide__left;
+}
+
+@keyframes slide__left {
+  from {
+    opacity: 0;
+    transform: translateX(5%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* SLIDE RIGHT */
+.slide-right__animate {
+  animation: 0.25s forwards ease-in-out slide__right;
+}
+
+@keyframes slide__right {
+  from {
+    opacity: 0;
+    transform: translateX(-5%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* SLIDE DOWN */
+.slide-down__animate {
+  animation: 0.25s forwards ease-in-out slide__down;
+}
+
+@keyframes slide__down {
+  from {
+    opacity: 0;
+    transform: translateY(-5%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* PULSE */
 .pulse__animate {
-    animation: 2s infinite ease pulse_animation;
+  animation: 2s infinite ease pulse__animation;
 }
 
-.delay1 {
-    animation-delay: 500ms;
-}
-
-.delay2 {
-    animation-delay: 1s;
-}
-
-.delay3 {
-    animation-delay: 1.5s;
-}
-
-@keyframes pulse_animation {
-    from {
-        opacity: 100%;
-        transform: scale(0);
-    } to {
-        opacity: 0;
-        transform: scale(2);
-    }
+@keyframes pulse__animation {
+  from {
+    opacity: 100%;
+    transform: scale(0);
+  }
+  to {
+    opacity: 0;
+    transform: scale(2);
+  }
 }
 
 /* LEVITATE */
 .levitate__animate {
-    animation: 4s infinite alternate ease-in-out levitate_animation;
+  animation: 4s infinite alternate ease-in-out levitate__animation;
 }
 
-@keyframes levitate_animation {
-    from {
-        transform: translateY(0);
-    } to {
-        transform: translateY(-2%);
-    }
+@keyframes levitate__animation {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-2%);
+  }
 }
 
 @media screen and (min-width: 1280px) {
-    #watch {
-        animation: 4s infinite alternate ease-in-out levitate_animation;
+  #watch {
+    animation: 4s infinite alternate ease-in-out levitate__animation;
+  }
+}
+
+/* SLIDE FADE UP */
+
+.slide-fade-up__animate {
+  animation: 0.5s forwards ease-in-out slide-fade-up__animation;
+}
+
+@keyframes slide-fade-up__animation {
+  0% {
+    opacity: 0;
+    transform: translateY(5%);
+  }
+  70% {
+    transform: translateY(-2%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* GENERAL DELAY */
+.delay150 {
+  animation-delay: 150ms;
+}
+
+.delay250 {
+  animation-delay: 250ms;
+}
+
+.delay300 {
+  animation-delay: 300ms;
+}
+
+.delay500 {
+  animation-delay: 500ms;
+}
+
+.delay750 {
+  animation-delay: 750ms;
+}
+
+.delay1000 {
+  animation-delay: 1s;
+}
+
+.delay1500 {
+  animation-delay: 1.5s;
+}
+
+/* DESCRIPTION CARDS */
+@media screen and (min-width: 1280px) {
+  #tactile {
+    animation: scale-up_one linear both;
+    animation-timeline: view(block);
+    animation-range: cover 0% cover 100%;
+  }
+  #drop {
+    animation: scale-up_two linear both;
+    animation-timeline: view(block);
+    animation-range: cover 0% cover 100%;
+  }
+  #data {
+    animation: scale-up_three linear both;
+    animation-timeline: view(block);
+    animation-range: cover 0% cover 100%;
+  }
+  #settings {
+    animation: scale-up_four linear both;
+    animation-timeline: view(block);
+    animation-range: cover 0% cover 100%;
+  }
+}
+
+@keyframes scale-up_one {
+  from {
+    transform: translateY(200%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes scale-up_two {
+  from {
+    transform: translateY(150%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes scale-up_three {
+  from {
+    transform: translate(20%, 0%);
+  }
+  to {
+    transform: translate(20%, -350%);
+  }
+}
+
+@keyframes scale-up_four {
+  from {
+    transform: translate(-20%, 0);
+  }
+  to {
+    transform: translate(-20%, -250%);
+  }
+}
+
+/* SPIN */
+.spin__animate {
+    animation: 10s infinite linear spin__animation;
+}
+
+@keyframes spin__animation {
+    from {
+        transform: rotate(0) translateX(-50%);
+    }
+    to {
+        transform: rotate(360deg) translateX(-50%);
     }
 }

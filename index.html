@@ -27,7 +27,7 @@
   <body class="flex flex-col bg-main">
     <!-- Empty div to render necessary classes for tailwin when it is added through a script -->
     <div
-      class="hidden rotate-45 translate-x-[0px] opacity-0 translate-y-[10px] "
+      class="hidden rotate-45 translate-x-[0px] opacity-0 translate-y-[10px]"
     ></div>
     <div class="hidden -rotate-45 -translate-y-[9px] -translate-y-full"></div>
     <!-- NAVBAR BTN -->
@@ -138,9 +138,11 @@
       <h2 class="absolute italic top-3 left-3 lg:hidden">CALL ME</h2>
       <section
         id="home"
-        class="min-h-[95vh] lg:min-h-[88vh] relative max-w-[750px] mx-auto xl:flex xl:flex-row-reverse xl:items-start xl:justify-between xl:max-w-[80%]"
+        class="min-h-[97vh] lg:min-h-[88vh] relative max-w-[750px] mx-auto xl:flex xl:flex-row-reverse xl:items-start xl:justify-between xl:max-w-[80%]"
       >
-        <div class="relative xl:w-[40%]">
+        <div
+          class="relative xl:w-[40%] slide-fade-up__animate delay300 opacity-0"
+        >
           <img
             src="/src/assets/images/watch_SB700_presentation.webp"
             alt="Montre Call Me"
@@ -158,19 +160,19 @@
 
         <div class="self-center">
           <h1
-            class="text-center md:text-5xl xl:text-7xl xl:text-start xl:-mt-10 xl:mb-5"
+            class="text-center opacity-0 md:text-5xl xl:text-7xl xl:text-start xl:-mt-10 xl:mb-5 slide-left__animate delay150"
           >
             Solution D'Appel
           </h1>
           <h2
-            class="mt-4 md:mt-2 mb-[5vh] text-center md:text-4xl xl:text-7xl xl:text-start"
+            class="mt-4 md:mt-2 mb-[5vh] text-center md:text-4xl xl:text-7xl xl:text-start slide-right__animate delay300 opacity-0"
           >
             Efficace,
             <span class="text-gradient">Sécurisée</span>
           </h2>
 
           <h3
-            class="px-6 mt-10 text-lg italic font-medium tracking-wide text-center text-secondary-800 md:text-xl xl:text-start xl:px-0 xl:pr-28 xl:leading-10"
+            class="px-6 mt-10 text-lg italic font-medium tracking-wide text-center opacity-0 text-secondary-800 md:text-xl xl:text-start xl:px-0 xl:pr-28 xl:leading-10 slide-down__animate delay500"
           >
             Dispositif moderne, sans fil, permettant un contact instantané du
             personnel selon une situation.
@@ -179,7 +181,7 @@
           <a
             href="#feature"
             type="button"
-            class="hidden px-6 py-4 mt-10 text-xl font-medium tracking-wide text-white duration-150 w-fit rounded-xl font-headers xl:block bg-primary-400 hover:bg-primary-600"
+            class="hidden px-6 py-4 mt-10 text-xl font-medium tracking-wide text-white duration-150 opacity-0 w-fit rounded-xl font-headers xl:block bg-primary-400 hover:bg-primary-600 slide-right__animate delay500"
           >
             En savoir plus
           </a>
@@ -197,7 +199,7 @@
       <!-- FEATURE SECTION -->
       <section
         id="feature"
-        class="relative px-5 py-10 mt-6 overflow-hidden rounded-lg shadow-section xl:mx-20 xl:rounded-3xl"
+        class="relative px-5 py-10 mt-6 overflow-hidden rounded-lg opacity-0 shadow-section xl:mx-20 xl:rounded-3xl"
       >
         <h2 class="text-center text-gradient">Fonctionnement</h2>
         <h3
@@ -268,21 +270,21 @@
           <div class="relative mx-auto w-fit">
             <!-- ANIMATION PULSE -->
             <div
-              class="absolute border-[1px] border-primary-400 border-solid w-[75px] md:w-[125px] xl:w-[175px] aspect-square rounded-full left-[10%] pulse__animate delay1 opacity-0"
+              class="absolute border-[1px] border-primary-400 border-solid w-[75px] md:w-[125px] xl:w-[175px] aspect-square rounded-full left-[10%] pulse__animate delay500 opacity-0"
             >
               <div
                 class="absolute bottom-0 w-full h-full rounded-lg top-3/4 bg-main"
               ></div>
             </div>
             <div
-              class="absolute border-[1px] border-primary-400 border-solid w-[75px] md:w-[125px] xl:w-[175px] aspect-square rounded-full left-[10%] pulse__animate delay2 opacity-0"
+              class="absolute border-[1px] border-primary-400 border-solid w-[75px] md:w-[125px] xl:w-[175px] aspect-square rounded-full left-[10%] pulse__animate delay1000 opacity-0"
             >
               <div
                 class="absolute bottom-0 w-full h-full rounded-lg top-3/4 bg-main"
               ></div>
             </div>
             <div
-              class="absolute border-[1px] border-primary-400 border-solid w-[75px] md:w-[125px] xl:w-[175px] aspect-square rounded-full left-[10%] pulse__animate delay3 opacity-0"
+              class="absolute border-[1px] border-primary-400 border-solid w-[75px] md:w-[125px] xl:w-[175px] aspect-square rounded-full left-[10%] pulse__animate delay1500 opacity-0"
             >
               <div
                 class="absolute bottom-0 w-full h-full rounded-lg top-3/4 bg-main"
@@ -310,12 +312,13 @@
       </section>
 
       <!-- DESCRIPTION SECTION -->
-      <section id="description" class="mt-6 xl:mt-14">
+      <section id="description" class="mt-6 opacity-0 xl:mt-14">
         <h2 class="mb-5 text-center text-gradient xl:mb-10">Description</h2>
 
         <div class="grid items-center grid-cols-12">
           <!-- TACTILE -->
           <aside
+            id="tactile"
             class="col-start-1 col-end-6 p-5 rounded-lg md:col-start-2 md:col-end-6 shadow-section xl:col-start-2 xl:col-end-5"
           >
             <h3
@@ -335,6 +338,7 @@
 
           <!-- WATERPROOF -->
           <aside
+            id="drop"
             class="col-start-7 col-end-13 p-5 rounded-lg md:col-start-7 md:col-end-12 translate-y-3/4 shadow-section xl:col-start-9 xl:col-end-12 xl:translate-y-0"
           >
             <h3
@@ -361,6 +365,7 @@
 
           <!-- DATA SAVE -->
           <aside
+            id="data"
             class="col-start-1 col-end-8 p-5 mt-5 rounded-lg md:col-start-2 md:col-end-7 shadow-section xl:col-start-2 xl:col-end-5 xl:translate-x-10"
           >
             <h3
@@ -380,6 +385,7 @@
 
           <!-- SETTINGS -->
           <aside
+            id="settings"
             class="col-start-5 col-end-13 p-5 mt-5 rounded-lg shadow-section md:col-start-6 md:col-end-11 xl:col-start-9 xl:col-end-12 xl:-translate-x-10"
           >
             <h3
@@ -411,7 +417,7 @@
       <!-- AUTONOMY SECTION -->
       <section
         id="autonomy"
-        class="relative px-5 py-10 mt-16 overflow-hidden rounded-lg shadow-section xl:mx-20 xl:rounded-3xl"
+        class="relative px-5 py-10 mt-16 overflow-hidden rounded-lg opacity-0 shadow-section xl:mx-20 xl:rounded-3xl"
       >
         <h2 class="mb-12 text-center text-gradient xl:mb-32">
           Autonomie Puissante
@@ -476,7 +482,7 @@
       </section>
 
       <!-- USECASE SECTION -->
-      <section id="usecase" class="min-h-[95vh] mt-6 xl:mt-14">
+      <section id="usecase" class="min-h-[95vh] mt-6 xl:mt-14 opacity-0">
         <h2 class="text-center text-gradient">Cas d'Utilisation</h2>
 
         <!-- RESTAURANT EXAMPLE -->
@@ -497,7 +503,7 @@
             <img
               src="src/assets/images/fonctionnement_global.webp"
               alt="Restaurant illustration"
-              class="w-[90%] block mx-auto rounded-lg xl:rounded-2xl"
+              class="w-[90%] block mx-auto rounded-lg xl:rounded-2xl xl:hover:scale-105 duration-300"
             />
 
             <!-- CONTAINER -->
@@ -564,7 +570,7 @@
             <img
               src="src/assets/images/school.webp"
               alt="School illustration"
-              class="w-[90%] block mx-auto rounded-lg xl:rounded-2xl"
+              class="w-[90%] block mx-auto rounded-lg xl:rounded-2xl xl:hover:scale-105 duration-300"
             />
 
             <div class="xl:flex xl:flex-col xl:gap-4">
@@ -579,7 +585,9 @@
                 />
               </h4>
 
-              <p class="text-sm text-center md:text-base xl:text-lg xl:text-start">
+              <p
+                class="text-sm text-center md:text-base xl:text-lg xl:text-start"
+              >
                 Le corps enseignant peut parfois ne pas se sentir totalement en
                 sécurité. Une simple pression sur leur bipper pourrait contacter
                 le personnel compétent afin de demander une intervention.
@@ -592,7 +600,7 @@
       <!-- CONTACT SECTION -->
       <section
         id="contact"
-        class="relative px-5 pt-4 pb-10 mt-16 overflow-hidden rounded-lg shadow-section xl:mx-20 xl:rounded-3xl"
+        class="relative px-5 pt-4 pb-10 mt-16 overflow-hidden rounded-lg opacity-0 shadow-section xl:mx-20 xl:rounded-3xl"
       >
         <!-- PHONE INFOS -->
         <p class="flex gap-2 text-sm italic font-semibold text-black">
@@ -605,11 +613,15 @@
 
         <!-- TITLE -->
         <h2 class="my-5 text-center text-gradient">Contactez-nous</h2>
-        <h3 class="mt-5 text-lg font-medium text-center xl:text-xl text-secondary-800">
+        <h3
+          class="mt-5 text-lg font-medium text-center xl:text-xl text-secondary-800"
+        >
           Nous proposons plusieurs formules s&apos;adaptant à tous types
           d&apos;utilisation.
         </h3>
-        <h3 class="text-lg font-medium text-center xl:text-xl xl:mt-2 text-secondary-800">
+        <h3
+          class="text-lg font-medium text-center xl:text-xl xl:mt-2 text-secondary-800"
+        >
           N&apos;attendez plus pour nous contacter !
         </h3>
 
@@ -650,7 +662,6 @@
                 class="w-full"
               />
             </div>
-
           </div>
           <div>
             <label for="object" class="hidden" aria-hidden="true"
@@ -678,7 +689,7 @@
               cols="30"
               rows="5"
               placeholder="Votre message..."
-              class="w-full"
+              class="w-full outline-none"
             ></textarea>
           </div>
 
