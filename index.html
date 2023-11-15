@@ -27,9 +27,9 @@
   <body class="flex flex-col bg-main">
     <!-- Empty div to render necessary classes for tailwin when it is added through a script -->
     <div
-      class="hidden rotate-45 translate-x-[0px] opacity-0 translate-y-[10px]"
+      class="hidden rotate-45 translate-x-[0px] opacity-0 translate-y-[10px] "
     ></div>
-    <div class="hidden -rotate-45 -translate-y-[9px]"></div>
+    <div class="hidden -rotate-45 -translate-y-[9px] -translate-y-full"></div>
     <!-- NAVBAR BTN -->
     <button
       type="button"
@@ -53,7 +53,7 @@
     <!-- HEADER -->
     <header
       id="header"
-      class="fixed top-0 right-0 flex flex-col w-3/4 md:w-1/2 h-full pt-20 lg:h-[6rem] text-lg md:text-xl duration-300 ease-in-out translate-x-full lg:pt-0 lg:w-full lg:translate-x-0 bg-main font-headers shadow-custom lg:shadow-none lg:duration-0 z-40"
+      class="fixed top-0 right-0 flex flex-col w-3/4 md:w-1/2 h-full pt-20 lg:h-[6rem] text-lg md:text-xl duration-300 ease-in-out translate-x-full lg:pt-0 lg:w-full lg:translate-x-0 bg-main font-headers shadow-custom lg:shadow-none z-40"
     >
       <div
         class="flex flex-col items-center justify-between grow lg:flex-row lg:grid lg:grid-cols-12"
@@ -398,7 +398,7 @@
         </div>
 
         <em
-          class="flex items-center float-right gap-2 mt-4 text-sm italic xl:text-base text-secondary-600"
+          class="flex items-center float-right gap-2 mt-4 text-sm italic xl:mr-20 xl:text-base text-secondary-600"
           ><img
             src="src/assets/icons/light_info.svg"
             alt="Info icon"
@@ -717,5 +717,6 @@
       </p>
     </footer>
     <script type="module" src="/src/main.ts"></script>
+    <script type="module" src="/src/observer.ts"></script>
   </body>
 </html>
