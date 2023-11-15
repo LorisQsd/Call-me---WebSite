@@ -6,7 +6,7 @@
   html {
     font-family: 'Noto sans', sans-serif;
     height: -webkit-fill-available;
-    scroll-behavior: smooth;
+    /* scroll-behavior: smooth; */
   }
   body {
     height: 100vh;
