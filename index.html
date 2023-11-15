@@ -131,15 +131,15 @@
     </header>
 
     <!-- Be careful concerning the padding top. We want it to be the same of the nav height because of its position behavior (fixed) -->
-    <main class="grow lg:pt-[6rem] p-4">
+    <main class="grow lg:pt-[6rem] p-4 relative">
       <!-- HERO SECTION -->
+      <h2 class="absolute italic top-3 left-3 lg:hidden">CALL ME</h2>
       <section id="home" class="min-h-[95vh] relative max-w-[750px] mx-auto">
-        <h2 class="italic lg:hidden">CALL ME</h2>
 
         <img
           src="/src/assets/images/watch_SB700_presentation.webp"
           alt="Montre Call Me"
-          class="w-[225px] md:w-[300px] drop-shadow-2xl block mx-auto my-[5vh]"
+          class="w-[225px] md:w-[300px] drop-shadow-2xl block mx-auto py-[10vh]"
         />
 
         <h1 class="text-center md:text-5xl">Solution D'Appel</h1>
@@ -170,28 +170,29 @@
         class="relative px-5 py-10 mt-6 overflow-hidden rounded-lg shadow-section"
       >
         <h2 class="text-center text-gradient">Fonctionnement</h2>
-        <h3 class="mt-5 text-lg font-medium text-center text-secondary-800">
+        <h3 class="mt-5 text-lg font-medium text-center md:max-w-[75%] mx-auto md:text-xl text-secondary-800">
           L&apos;utilisateur peut contacter discrètement un membre du personnel
           connecté en toute autonomie.
         </h3>
 
         <!-- BIPPER & WATCH CONTAINER -->
-        <div class="grid grid-cols-12 mt-10 justify-items-center">
+        <div class="grid grid-cols-12 mt-10 md:text-md justify-items-center">
           <!-- BIPPER CONTAINER -->
-          <div class="col-span-5">
+          <div class="col-span-5 md:col-start-2 md:col-end-6">
             <div class="relative m-auto w-fit">
+              <!-- INFO ICON -->
               <img
                 src="src/assets/icons/light_info.svg"
                 alt="info icon"
-                class="absolute -top-2 -right-2"
+                class="absolute -top-2 -right-2 md:w-[20px]"
               />
               <img
                 src="src/assets/images/ST3002_BIP_1.webp"
-                class="w-[75px] drop-shadow-2xl mb-5"
+                class="w-[75px] md:w-[100px] drop-shadow-2xl mb-5"
                 alt="Bipper"
               />
             </div>
-            <p class="text-sm text-center">
+            <p class="text-center">
               Bipper permettant à l'utilisateur de lancer un appel
             </p>
           </div>
@@ -199,18 +200,18 @@
           <img
             src="src/assets/icons/ondes.svg"
             alt="Ondes"
-            class="col-span-2 mt-8"
+            class="col-span-2 mt-8 md:col-start-6 md:col-end-8"
           />
 
           <!-- WATCH CONTAINER -->
-          <div class="col-span-5">
+          <div class="col-span-5 md:col-start-8 md:col-end-11">
             <img
               src="src/assets/images/watch_SB700_face_1.webp"
               alt="Montre de face"
-              class="w-[60px] mb-2 mx-auto drop-shadow-2xl"
+              class="w-[60px] md:w-[80px] mb-2 mx-auto drop-shadow-2xl"
             />
 
-            <p class="text-sm text-center">
+            <p class="text-center">
               Montre bracelet portée par le personnel recevant l&apos;appel de
               l&apos;utilisateur.
             </p>
@@ -222,21 +223,21 @@
           <div class="relative mx-auto w-fit">
             <!-- ANIMATION PULSE -->
             <div
-              class="absolute border-[1px] border-primary-400 border-solid w-[75px] aspect-square rounded-full left-[10%] pulse__animate delay1 opacity-0"
+              class="absolute border-[1px] border-primary-400 border-solid w-[75px] md:w-[125px] aspect-square rounded-full left-[10%] pulse__animate delay1 opacity-0"
             >
               <div
                 class="absolute bottom-0 w-full h-full rounded-lg top-3/4 bg-main"
               ></div>
             </div>
             <div
-              class="absolute border-[1px] border-primary-400 border-solid w-[75px] aspect-square rounded-full left-[10%] pulse__animate delay2 opacity-0"
+              class="absolute border-[1px] border-primary-400 border-solid w-[75px] md:w-[125px] aspect-square rounded-full left-[10%] pulse__animate delay2 opacity-0"
             >
               <div
                 class="absolute bottom-0 w-full h-full rounded-lg top-3/4 bg-main"
               ></div>
             </div>
             <div
-              class="absolute border-[1px] border-primary-400 border-solid w-[75px] aspect-square rounded-full left-[10%] pulse__animate delay3 opacity-0"
+              class="absolute border-[1px] border-primary-400 border-solid w-[75px] md:w-[125px] aspect-square rounded-full left-[10%] pulse__animate delay3 opacity-0"
             >
               <div
                 class="absolute bottom-0 w-full h-full rounded-lg top-3/4 bg-main"
@@ -245,15 +246,16 @@
             <img
               src="src/assets/images/relai_hq_1.webp"
               alt="Relai"
-              class="drop-shadow-2xl w-[100px] mt-[8vh]"
+              class="drop-shadow-2xl w-[100px] md:w-[150px] mt-[8vh]"
             />
+            <!-- INFO ICON -->
             <img
               src="src/assets/icons/light_info.svg"
               alt="info icon"
-              class="absolute -top-2 -right-2"
+              class="absolute -top-2 -right-2 md:w-[20px]"
             />
           </div>
-          <p class="relative mt-2 text-sm text-center">
+          <p class="relative mt-2 text-sm text-center md:mt-5 md:text-lg">
             Relai offrant une meilleure couverture réseau.
           </p>
         </div>
