@@ -120,12 +120,12 @@
         <div
           class="flex flex-col items-center w-full gap-10 lg:col-start-11 lg:col-end-13"
         >
-          <button
-            type="button"
-            class="w-3/4 py-2 text-white rounded-lg bg-primary-400 lg:w-[150px] hover:bg-primary-600 duration-150"
+          <a
+            href="#contact"
+            id="navlink"
+            class="w-3/4 py-2 text-white rounded-lg bg-primary-400 lg:w-[150px] hover:bg-primary-600 duration-150 text-center"
+            >Contact</a
           >
-            <a href="#contact" id="navlink">Contact</a>
-          </button>
 
           <div
             role="separator"
@@ -366,16 +366,12 @@
                 class="absolute w-[250px] p-2 rounded-md bg-main bottom-6 left-6 shadow-section z-10 text-xs xl:text-sm hidden"
               >
                 <p class="font-normal">
-                  <strong class="font-semibold text-black"
-                    >Fréquence :</strong
-                  >
+                  <strong class="font-semibold text-black">Fréquence :</strong>
                   FSK 433.42MHz
                 </p>
 
                 <p class="font-normal">
-                  <strong class="font-semibold text-black"
-                    >Dimension :</strong
-                  >
+                  <strong class="font-semibold text-black">Dimension :</strong>
                   W159 x L110 x H23mm
                 </p>
 
@@ -733,6 +729,8 @@
                 autocomplete="off"
                 aria-autocomplete="none"
                 class="w-full"
+                required
+                aria-required="true"
               />
             </div>
             <div class="xl:w-1/2">
@@ -748,6 +746,8 @@
                 autocomplete="off"
                 aria-autocomplete="none"
                 class="w-full"
+                required
+                aria-required="true"
               />
             </div>
           </div>
@@ -764,6 +764,9 @@
               aria-label="Indiquez l'objet de votre message"
               aria-autocomplete="none"
               class="w-full"
+              required
+              aria-required="true"
+              aria
             />
           </div>
 
@@ -778,6 +781,8 @@
               rows="5"
               placeholder="Votre message..."
               class="w-full outline-none"
+              required
+              aria-required="true"
             ></textarea>
           </div>
 
@@ -789,7 +794,7 @@
           </button>
         </form>
 
-        <p id="requestMessage" class="mt-10 text-center text-green-600"></p>
+        <p aria-errormessage="true" id="requestMessage" class="mt-10 text-center text-green-600"></p>
       </section>
     </main>
 

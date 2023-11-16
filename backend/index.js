@@ -33,10 +33,12 @@ router.post('/send', async (req, res) => {
   // Send grid configuration
   sgMail.setApiKey(process.env.SENDGRID_API_KEY);
   const msg = {
-    to: email,
+    to: "loris.quesado@hotmail.fr",
     from: 'immoprosoclock@gmail.com',
     subject: object,
-    text: `Auteur - ${name} : ${message}` ,
+    text: `Auteur - ${name}
+    mail - ${email}
+    Message : ${message}` ,
   };
 
   try { 
@@ -51,5 +53,6 @@ router.post('/send', async (req, res) => {
 
 // === SERVER === //
 app.listen(PORT, () => {
+  // eslint-disable-next-line no-console
   console.log(`Server is running on port http://localhost:${PORT}`);
 });
