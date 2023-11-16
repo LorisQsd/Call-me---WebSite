@@ -1,11 +1,117 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+
+    <!-- Font Family - Poppins -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Family - Noto Sans -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/src/styles/_reset.css" />
+    <link rel="stylesheet" href="/src/styles/index.css" />
+    <link rel="stylesheet" href="/src/styles/animations.css" />
+
+    <title>Call Me - Mentions Légales</title>
+  </head>
+  <body class="flex flex-col bg-main">
+    <header>
+      <a href="index.html">
+        <h1 class="m-6 italic">CALL ME</h1>
+      </a>
+    </header>
+
+    <main class="relative p-4 grow">
+      <section
+        class="relative p-5 rounded-lg shadow-section max-w-[800px] mx-auto text-sm md:text-base"
+      >
+        <h3 class="text-lg md:text-xl xl:text-2xl">Mentions Légales</h3>
+        <p class="font-normal">
+          Les présentes mentions légales définissent les règles de
+          fonctionnement et d'utilisation de l'application web Immo'Pros.
+        </p>
+        <p class="my-2 font-normal">
+          Le site
+          <a
+            href="https://call-me-bs.netlify.app"
+            target="_blank"
+            class="font-semibold text-primary-400"
+          >
+            https://call-me-bs.netlify.app
+          </a>
+          et ses services sont édités et exploités par :
+        </p>
+
+        <h3 class="mt-6 text-lg md:text-xl xl:text-2xl">CALL ME</h3>
+        <p class="font-normal">
+          Société par Action Simplifiée au capital de 2 000 €
+        </p>
+        <p class="font-normal">
+          Siège Social: 96, Rue Paradis, 13006 Marseille, France
+        </p>
+        <p class="font-normal">RCS 915262380</p>
+        <p class="font-normal">91526238000024</p>
+
+        <p class="mt-6 font-normal">
+          Directeur de la publication: M. Didier VIAUD
+        </p>
+        <p class="font-normal">Téléphone: 07.56.88.12.13</p>
+        <p class="font-normal">
+          Email:
+          <a
+            href="mailto: callme13790@gmail.com"
+            class="font-semibold text-primary-400"
+            >callme13790@gmail.com</a
+          >
+        </p>
+
+        <h3 class="mt-6 text-lg uppercase md:text-xl xl:text-2xl">
+          Hébergement
+        </h3>
+        <p class="font-normal">En france, le serveur est hébérgé par :</p>
+
+        <p class="mt-6 font-normal uppercase">Netlify</p>
+        <p class="font-normal">
+          Siège social : 44 Montgomery Street, Suite 300. San Francisco,
+          California 94104.
+        </p>
+        <p class="font-normal">Email de contact : support@netlify.com</p>
+        <p class="font-normal">RCS : Toulouse B 798 133 682</p>
+      </section>
+    </main>
+
+    <footer class="p-4 text-xs xl:text-sm">
+      <h2 class="mb-2 italic">CALL ME</h2>
+      <p>SAS CALL ME - 93, rue de Paradis, 13006 MARSEILLE</p>
+      <p class="mt-1">RCS 915262380</p>
+      <p class="mt-1">07.56.88.12.13</p>
+      <a
+        href="mailto: callme13790@gmail.com"
+        class="block mt-1 text-secondary-800"
+        >callme13790@gmail.com</a
+      >
+
+      <p class="mt-4 text-center">
+        Tous droits réservés © - <span id="year">xxxx</span>
+      </p>
+      <div role="separator" class="w-[10px] h-[1px] bg-secondary-800 mx-auto my-4"></div>
+      <a href="legals.html" class="block text-center text-secondary-800">Mentions Légales</a>
+
+      <p class="float-right w-1/2 mt-5 italic text-end">
+        Designed & Developped by Loris QUESADO
+      </p>
+    </footer>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
 </html>

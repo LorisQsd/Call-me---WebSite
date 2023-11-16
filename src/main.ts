@@ -53,13 +53,20 @@ const handleSubmit = async (e: any) => {
 
     contactForm?.reset();
 
-    if (messageElement)
+    if (messageElement) {
       messageElement.textContent =
         'Votre demande de contact a bien été transmise, nous revenons vers vous au plus vite.';
+      messageElement.classList.remove('text-red-600');
+    }
     return response.data;
   } catch (error) {
+    if (messageElement) {
+      messageElement.textContent =
+        "Votre demande de contact n'a pas pu être correctement transmise. Nous réglons le problème.";
+      messageElement.classList.add('text-red-600');
+    }
     throw new Error(`${error}`);
   }
 };
 
-contactForm.addEventListener('submit', handleSubmit);
+contactForm?.addEventListener('submit', handleSubmit);
