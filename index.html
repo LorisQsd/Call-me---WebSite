@@ -25,7 +25,7 @@
     <title>Call Me</title>
   </head>
   <body class="flex flex-col bg-main">
-    <!-- Empty div to render necessary classes for tailwin when it is added through a script -->
+    <!-- Empty div to render necessary classes for tailwind when it is added through a script -->
     <div
       class="hidden rotate-45 translate-x-[0px] opacity-0 translate-y-[10px] text-red-600"
     ></div>
@@ -198,7 +198,7 @@
       <!-- FEATURE SECTION -->
       <section
         id="feature"
-        class="relative px-5 py-10 mt-6 overflow-hidden rounded-lg opacity-0 shadow-section xl:mx-20 xl:rounded-3xl"
+        class="px-5 py-10 mt-6 overflow-hidden rounded-lg opacity-0 shadow-section xl:mx-20 xl:rounded-3xl"
       >
         <h2 class="text-center text-gradient">Fonctionnement</h2>
         <h3
@@ -216,19 +216,11 @@
           <div
             class="col-span-5 md:col-start-2 md:col-end-6 xl:col-start-3 xl:col-end-5"
           >
-            <div class="relative m-auto w-fit">
-              <!-- INFO ICON -->
-              <img
-                src="src/assets/icons/light_info.svg"
-                alt="info icon"
-                class="absolute -top-2 -right-2 md:w-[20px] cursor-pointer z-10 xl:w-[25px]"
-              />
-              <img
-                src="src/assets/images/ST3002_BIP_1.webp"
-                class="w-[75px] md:w-[100px] xl:w-[150px] drop-shadow-2xl mb-5"
-                alt="Bipper"
-              />
-            </div>
+            <img
+              src="src/assets/images/ST3002_BIP_1.webp"
+              class="w-[75px] md:w-[100px] xl:w-[150px] mx-auto drop-shadow-2xl mb-5"
+              alt="Bipper"
+            />
             <p class="text-center">
               Bipper permettant à l'utilisateur de lancer un appel
             </p>
@@ -251,11 +243,64 @@
           <div
             class="col-span-5 md:col-start-8 md:col-end-11 xl:col-start-9 xl:col-end-11"
           >
-            <img
-              src="src/assets/images/watch_SB700_face_1.webp"
-              alt="Montre de face"
-              class="w-[60px] md:w-[80px] mb-2 mx-auto drop-shadow-2xl xl:w-[120px]"
-            />
+            <div class="relative m-auto w-fit">
+              <!-- ILLUSTRATION WATCH PICTURE -->
+              <img
+                src="src/assets/images/watch_SB700_face_1.webp"
+                alt="Montre de face"
+                class="w-[60px] md:w-[80px] mb-2 mx-auto drop-shadow-2xl xl:w-[120px]"
+              />
+
+              <!-- INFO CONTAINER -->
+              <div class="absolute z-10 hidden -top-2 -right-2 lg:block">
+                <img
+                  id="watchInfo"
+                  src="src/assets/icons/light_info.svg"
+                  alt="info icon"
+                  class="md:w-[20px] cursor-pointer xl:w-[25px]"
+                />
+
+                <!-- TOAST INFO -->
+                <div
+                  id="watchInfoToast"
+                  class="absolute w-[250px] p-2 rounded-md bg-main bottom-4 right-4 shadow-section z-10 text-xs xl:text-sm hidden"
+                >
+                  <p class="font-normal">
+                    <strong class="font-semibold text-black"
+                      >Fréquence :</strong
+                    >
+                    FSK 433.42MHz
+                  </p>
+
+                  <p class="font-normal">
+                    <strong class="font-semibold text-black"
+                      >Dimension :</strong
+                    >
+                    W45 x L56 x H11.5mm
+                  </p>
+
+                  <p class="font-normal">
+                    <strong class="font-semibold text-black">Poids :</strong>
+                    42g / clip 30g
+                  </p>
+
+                  <p class="font-normal">
+                    <strong class="font-semibold text-black">Coloris :</strong>
+                    Noir / gris
+                  </p>
+
+                  <p class="font-normal">
+                    <strong class="font-semibold text-black">Antenne :</strong>
+                    Hélicoidale
+                  </p>
+
+                  <p class="font-normal">
+                    <strong class="font-semibold text-black">Alim. :</strong>
+                    USB - Batterie 3.7V / 320 mAh Lipolymer
+                  </p>
+                </div>
+              </div>
+            </div>
 
             <p class="text-center">
               Montre bracelet portée par le personnel recevant l&apos;appel de
@@ -295,15 +340,58 @@
               alt="Relai"
               class="drop-shadow-2xl w-[100px] md:w-[150px] mt-[8vh] xl:w-[225px]"
             />
-            <!-- INFO ICON -->
-            <img
-              src="src/assets/icons/light_info.svg"
-              alt="info icon"
-              class="absolute -top-2 xl:-top-4 xl:-right-4 -right-2 md:w-[20px] cursor-pointer z-10 xl:w-[25px]"
-            />
+            <!-- INFO CONTAINER -->
+            <div class="absolute z-10 hidden lg:block -top-2 -right-2">
+              <img
+                id="relayInfo"
+                src="src/assets/icons/light_info.svg"
+                alt="info icon"
+                class="md:w-[20px] cursor-pointer xl:w-[25px]"
+              />
+
+              <!-- TOAST INFO -->
+              <div
+                id="relayInfoToast"
+                class="absolute w-[250px] p-2 rounded-md bg-main bottom-4 left-4 shadow-section z-10 text-xs xl:text-sm hidden"
+              >
+                <p class="font-normal">
+                  <strong class="font-semibold text-black"
+                    >Fréquence :</strong
+                  >
+                  FSK 433.42MHz
+                </p>
+
+                <p class="font-normal">
+                  <strong class="font-semibold text-black"
+                    >Dimension :</strong
+                  >
+                  W159 x L110 x H23mm
+                </p>
+
+                <p class="font-normal">
+                  <strong class="font-semibold text-black">Poids :</strong>
+                  150g
+                </p>
+
+                <p class="font-normal">
+                  <strong class="font-semibold text-black">Coloris :</strong>
+                  Noir
+                </p>
+
+                <p class="font-normal">
+                  <strong class="font-semibold text-black">Antenne :</strong>
+                  ROD
+                </p>
+
+                <p class="font-normal">
+                  <strong class="font-semibold text-black">Alim. :</strong>
+                  Secteur DC12V/A AC100-240V
+                </p>
+              </div>
+            </div>
           </div>
           <p
-            class="relative mx-auto mt-2 text-sm text-center md:mt-5 md:text-base xl:text-lg xl:w-1/4"
+            class="relative mx-auto mt-2 text-base text-center md:mt-5 xl:text-lg xl:w-1/4"
           >
             Relai offrant une meilleure couverture réseau.
           </p>
@@ -365,7 +453,7 @@
           <!-- DATA SAVE -->
           <aside
             id="data"
-            class="col-start-1 col-end-8 p-5 mt-5 rounded-lg md:col-start-2 md:col-end-7 shadow-section xl:col-start-2 xl:col-end-5 xl:translate-x-10"
+            class="col-start-2 col-end-9 p-5 mt-5 rounded-lg md:col-start-2 md:col-end-7 shadow-section xl:col-start-2 xl:col-end-5 xl:translate-x-10"
           >
             <h3
               class="flex items-center gap-3 text-lg text-center md:text-xl xl:text-2xl"
@@ -401,16 +489,6 @@
             </p>
           </aside>
         </div>
-
-        <em
-          class="flex items-center float-right gap-2 mt-4 text-sm italic xl:mr-20 xl:text-base text-secondary-600"
-          ><img
-            src="src/assets/icons/light_info.svg"
-            alt="Info icon"
-            class="cursor-pointer xl:w-[25px]"
-          />
-          Voir plus</em
-        >
       </section>
 
       <!-- AUTONOMY SECTION -->
@@ -424,9 +502,9 @@
 
         <!-- IMAGE CONTAINER -->
         <div
-          class="flex items-center mx-auto md:mt-10 md:gap-10 md:w-3/4 xl:w-full xl:pl-16"
+          class="flex flex-col items-center mx-auto sm:flex-row md:mt-10 md:gap-10 md:w-3/4 xl:w-full xl:pl-16"
         >
-          <div class="relative w-1/2 xl:w-1/4">
+          <div class="relative w-1/2 mb-16 xl:w-1/4 sm:mb-0">
             <img
               src="src/assets/images/watch_SB700_face_1.webp"
               alt="Montre de face"
@@ -441,7 +519,7 @@
 
           <!-- CONTENT CONTAINER -->
           <div
-            class="w-1/2 text-sm md:text-base xl:self-start xl:text-lg xl:w-[60%]"
+            class="w-full text-center sm:text-start sm:w-1/2 text-sm md:text-base xl:self-start xl:text-lg xl:w-[60%]"
           >
             <p class="xl:leading-8">
               La durée de fonctionnement de notre montre s&apos;étend à environ
@@ -449,9 +527,9 @@
               quant à la batterie.
             </p>
             <p class="mt-4 xl:leading-8">
-              Vous avez oublié de mettre en charge votre montre la veille ?
-              Aucun soucis, son système de recharge rapide permettra de rendre
-              le dispositif à nouveau opérationnel en un temps record !
+              Vous avez oublié de mettre en charge votre montre la veille? Aucun
+              soucis, son système de recharge rapide permettra de rendre le
+              dispositif à nouveau opérationnel en un temps record !
             </p>
           </div>
         </div>
@@ -481,7 +559,7 @@
       </section>
 
       <!-- USECASE SECTION -->
-      <section id="usecase" class="min-h-[95vh] mt-6 xl:mt-14 opacity-0">
+      <section id="usecase" class="min-h-[95vh] mt-12 xl:mt-14 opacity-0">
         <h2 class="text-center text-gradient">Cas d'Utilisation</h2>
 
         <!-- RESTAURANT EXAMPLE -->

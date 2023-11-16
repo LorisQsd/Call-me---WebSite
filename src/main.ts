@@ -70,3 +70,42 @@ const handleSubmit = async (e: any) => {
 };
 
 contactForm?.addEventListener('submit', handleSubmit);
+
+// === INFO BUBBLE === //
+const watchInfoIcon = document.getElementById("watchInfo");
+const watchInfoToast = document.getElementById("watchInfoToast");
+
+const relayInfoIcon = document.getElementById("relayInfo");
+const relayInfoToast = document.getElementById("relayInfoToast");
+
+const showToast = (e: any) => {
+  switch(e.target.id) {
+    case "watchInfo" :
+      watchInfoToast?.classList.remove("hidden");
+      break;
+    case "relayInfo" :
+      relayInfoToast?.classList.remove("hidden");
+      break;
+    default :
+      break;
+  }
+}
+
+const hideToast = (e: any) => {
+  switch(e.target.id) {
+    case "watchInfo" :
+      watchInfoToast?.classList.add("hidden");
+      break;
+    case "relayInfo" :
+      relayInfoToast?.classList.add("hidden");
+      break;
+    default :
+      break;
+  }
+}
+
+watchInfoIcon?.addEventListener('mouseenter', showToast)
+watchInfoIcon?.addEventListener('mouseleave', hideToast)
+
+relayInfoIcon?.addEventListener('mouseenter', showToast)
+relayInfoIcon?.addEventListener('mouseleave', hideToast)
