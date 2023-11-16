@@ -1,0 +1,5 @@
+# robots.txt for the CALL ME Landing page
+
+# User-agents
+User-agent: *
+Allow: /
