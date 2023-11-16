@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "netlify deploy --prod",
+    "vitebuild": "tsc && vite build",
     "preview": "vite preview",
     "lint": "tsc --noEmit && eslint src/**/*.{js,jsx,ts,tsx} --cache --max-warnings=0",
     "lint:fix": "eslint src/**/*.{js,jsx,ts,tsx} --fix",
@@ -30,9 +31,9 @@
     "@sendgrid/mail": "^7.7.0",
     "axios": "^1.6.2",
     "cors": "^2.8.5",
-    "dompurify": "^3.0.6",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
+    "serverless-http": "^3.2.0",
     "typescript": "^5.0.2",
     "vite": "^4.4.5"
   }

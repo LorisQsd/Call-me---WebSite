@@ -49,7 +49,7 @@ const handleSubmit = async (e: any) => {
   const form = Object.fromEntries(formData);
 
   try {
-    const response = await axios.post('http://localhost:8080/send', form);
+    const response = await axios.post('https://call-me-bs.netlify.app/send', form);
 
     contactForm?.reset();
 
