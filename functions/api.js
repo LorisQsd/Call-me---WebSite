@@ -1,15 +1,13 @@
-import express, { Router } from 'express';
-import serverless from "serverless-http";
-import cors from 'cors';
-import dotenv from 'dotenv';
-import sgMail from '@sendgrid/mail';
-
-dotenv.config();
+const express = require("express");
+const serverless = require("serverless-http");
+const dotenv = require("dotenv");
+const sgMail = require("@sendgrid/mail")
+const cors = require("cors");
 
 const app = express();
-const router = new Router();
+const router = express.Router();
 
-const PORT = 8080;
+dotenv.config();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -18,11 +16,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use(
   cors({
     origin: [
-      // === LOCAL DEV === //
-      'http://localhost:3000',
+      'https://call-me-bs.netlify.app',
     ],
     credentials: true,
-    methods: 'GET,PATCH,POST,DELETE',
+    methods: 'GET,POST',
   })
 );
 
@@ -38,12 +35,12 @@ router.post('/send', async (req, res) => {
   // Send grid configuration
   sgMail.setApiKey(process.env.SENDGRID_API_KEY);
   const msg = {
-    to: "loris.quesado@hotmail.fr",
+    to: "callme13790@gmail.com",
     from: 'immoprosoclock@gmail.com',
     subject: object,
     text: `Auteur - ${name}
-    mail - ${email}
-    Message : ${message}` ,
+Mail - ${email}
+Message - ${message}` ,
   };
 
   try { 
@@ -53,15 +50,7 @@ router.post('/send', async (req, res) => {
   } catch (error) {
     res.status(400).json(error)
   }
-
 });
 
-app.use("/.netlify/functions/api.js", router)
-
-export default serverless(app);
-
-// === SERVER === //
-app.listen(PORT, () => {
-  // eslint-disable-next-line no-console
-  console.log(`Server is running on port http://localhost:${PORT}`);
-});
+app.use('/.netlify/functions/api', router);
+module.exports.handler = serverless(app);
