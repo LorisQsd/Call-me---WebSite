@@ -49,7 +49,10 @@ const handleSubmit = async (e: any) => {
   const form = Object.fromEntries(formData);
 
   try {
-    const response = await axios.post('https://call-me-bs.netlify.app/.netlify/functions/api/send', form);
+    const response = await axios.post(
+      'https://call-me-bs.netlify.app/.netlify/functions/api/send',
+      form
+    );
 
     contactForm?.reset();
 
@@ -72,40 +75,49 @@ const handleSubmit = async (e: any) => {
 contactForm?.addEventListener('submit', handleSubmit);
 
 // === INFO BUBBLE === //
-const watchInfoIcon = document.getElementById("watchInfo");
-const watchInfoToast = document.getElementById("watchInfoToast");
+const watchInfoIcon = document.getElementById('watchInfo');
+const watchInfoToast = document.getElementById('watchInfoToast');
 
-const relayInfoIcon = document.getElementById("relayInfo");
-const relayInfoToast = document.getElementById("relayInfoToast");
+const relayInfoIcon = document.getElementById('relayInfo');
+const relayInfoToast = document.getElementById('relayInfoToast');
 
 const showToast = (e: any) => {
-  switch(e.target.id) {
-    case "watchInfo" :
-      watchInfoToast?.classList.remove("hidden");
+  switch (e.target.id) {
+    case 'watchInfo':
+      watchInfoToast?.classList.remove('hidden');
       break;
-    case "relayInfo" :
-      relayInfoToast?.classList.remove("hidden");
+    case 'relayInfo':
+      relayInfoToast?.classList.remove('hidden');
       break;
-    default :
+    default:
       break;
   }
-}
+};
 
 const hideToast = (e: any) => {
-  switch(e.target.id) {
-    case "watchInfo" :
-      watchInfoToast?.classList.add("hidden");
+  switch (e.target.id) {
+    case 'watchInfo':
+      watchInfoToast?.classList.add('hidden');
       break;
-    case "relayInfo" :
-      relayInfoToast?.classList.add("hidden");
+    case 'relayInfo':
+      relayInfoToast?.classList.add('hidden');
       break;
-    default :
+    default:
       break;
   }
+};
+
+watchInfoIcon?.addEventListener('mouseenter', showToast);
+watchInfoIcon?.addEventListener('mouseleave', hideToast);
+
+relayInfoIcon?.addEventListener('mouseenter', showToast);
+relayInfoIcon?.addEventListener('mouseleave', hideToast);
+
+// === SCROLL TO TOP BUTTON === //
+const scrollToTopBtn = document.getElementById("scroll-to-top-btn");
+
+const scrollToTop = () => {
+  window.scrollTo(0, 0)  
 }
 
-watchInfoIcon?.addEventListener('mouseenter', showToast)
-watchInfoIcon?.addEventListener('mouseleave', hideToast)
-
-relayInfoIcon?.addEventListener('mouseenter', showToast)
-relayInfoIcon?.addEventListener('mouseleave', hideToast)
+scrollToTopBtn?.addEventListener("click", scrollToTop);
