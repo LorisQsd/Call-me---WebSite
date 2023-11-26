@@ -1,6 +1,6 @@
 <h1 style='text-align: center; font-size: 40px'>CALL ME WEBSITE</h1>
 
-![Capture d'écran 1](/public/screenshot1.png)
+![Capture d'écran 1](/screenshots/screenshot1.png)
 
 Website statique type landing page pour la SAS CALL ME immatriculée au RCS 915262380.
 
