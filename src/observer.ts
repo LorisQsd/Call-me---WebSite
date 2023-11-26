@@ -2,7 +2,7 @@
 const headerElement = document.getElementById('header');
 const navlinks = headerElement?.querySelectorAll('#navlink');
 
-// SECTIONS
+// SECTIONS SELECTORS
 const homeSection = document.getElementById('home');
 const featureSection = document.getElementById('feature');
 const descriptionSection = document.getElementById('description');

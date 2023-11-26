@@ -1,30 +1,37 @@
 import axios from 'axios';
 
 // === YEAR GENERATION === //
+// Selector
 const yearElement = document.getElementById('year');
+
+// We want to create a new instance of the Date class to get dynamically the full year.
+// So for each new year, we will not need to change manually the date.
 const currentDate = new Date();
 const currentYear = currentDate.getFullYear();
 
 if (yearElement) yearElement.textContent = currentYear.toString();
 
 // === NAVBAR === //
+// State
 let isNavbarOpen = false;
 
+// Selectors
 const navbarBtn = document.getElementById('navbarBtn');
-const navLinks = document.querySelectorAll('#navlink');
+const headerElement = document.getElementById('header');
+const navLinks = headerElement?.querySelectorAll('a');
 
+// Handler
 const handleNavbar = () => {
-  // Elements
+  // Select the three bars of the navbar button (mobile version only)
   const firstBar = document.getElementById('firstBar');
   const secondBar = document.getElementById('secondBar');
   const thirdBar = document.getElementById('thirdBar');
-
-  const headerElement = document.getElementById('header');
 
   // Toggler
   headerElement?.classList.toggle('translate-x-full');
   isNavbarOpen = !isNavbarOpen;
 
+  // Tailwind CSS changes
   firstBar?.classList.toggle('rotate-45');
   firstBar?.classList.toggle('translate-y-[10px]');
   secondBar?.classList.toggle('opacity-0');
@@ -32,22 +39,26 @@ const handleNavbar = () => {
   thirdBar?.classList.toggle('-translate-y-[9px]');
 };
 
-navLinks.forEach((link) => {
+// We want to close the navbar by toggling the state that the user clicks on a link in the header.
+navLinks?.forEach((link) => {
   link.addEventListener('click', handleNavbar);
 });
 
 navbarBtn?.addEventListener('click', handleNavbar);
 
 // === CONTACT FORM === //
+// Selectors
 const contactForm = document.getElementById('contactForm') as HTMLFormElement;
 const messageElement = document.getElementById('requestMessage');
 
+// Handler
 const handleSubmit = async (e: any) => {
   e.preventDefault();
 
   const formData = new FormData(e.currentTarget);
   const form = Object.fromEntries(formData);
 
+  // AXIOS -- POST => Send mail
   try {
     const response = await axios.post(
       'https://call-me-bs.netlify.app/.netlify/functions/api/send',
@@ -75,12 +86,15 @@ const handleSubmit = async (e: any) => {
 contactForm?.addEventListener('submit', handleSubmit);
 
 // === INFO BUBBLE === //
+// Selectors
 const watchInfoIcon = document.getElementById('watchInfo');
 const watchInfoToast = document.getElementById('watchInfoToast');
 
+// Selectors
 const relayInfoIcon = document.getElementById('relayInfo');
 const relayInfoToast = document.getElementById('relayInfoToast');
 
+// Handlers
 const showToast = (e: any) => {
   switch (e.target.id) {
     case 'watchInfo':
@@ -107,6 +121,7 @@ const hideToast = (e: any) => {
   }
 };
 
+// Listeners
 watchInfoIcon?.addEventListener('mouseenter', showToast);
 watchInfoIcon?.addEventListener('mouseleave', hideToast);
 
@@ -114,10 +129,13 @@ relayInfoIcon?.addEventListener('mouseenter', showToast);
 relayInfoIcon?.addEventListener('mouseleave', hideToast);
 
 // === SCROLL TO TOP BUTTON === //
-const scrollToTopBtn = document.getElementById("scroll-to-top-btn");
+// Selector
+const scrollToTopBtn = document.getElementById('scroll-to-top-btn');
 
+// Handler
 const scrollToTop = () => {
-  window.scrollTo(0, 0)  
-}
+  window.scrollTo(0, 0);
+};
 
-scrollToTopBtn?.addEventListener("click", scrollToTop);
+// Listener
+scrollToTopBtn?.addEventListener('click', scrollToTop);
