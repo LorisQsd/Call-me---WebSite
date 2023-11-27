@@ -39,21 +39,25 @@ const observer = new IntersectionObserver(
             navlink.classList.remove('text-primary-400');
             navlink.classList.remove('font-semibold');
           }
-        });        
-        
-      } 
+        });
+      }
 
-      if(entry.isIntersecting && entry.target !== homeSection) {
-        entry.target.classList.add("slide-fade-up__animate")
+      if (entry.isIntersecting && entry.target !== homeSection) {
+        entry.target.classList.add('slide-fade-up__animate');
       }
     }
   },
   { rootMargin: '-100px 0px -200px 0px' }
 );
 
-observer.observe(homeSection as HTMLElement);
-observer.observe(featureSection as HTMLElement);
-observer.observe(descriptionSection as HTMLElement);
-observer.observe(autonomySection as HTMLElement);
-observer.observe(usecaseSection as HTMLElement);
-observer.observe(contactSection as HTMLElement);
+// We want to observe only if the user is on the landing page
+// It will not display an error message for legals page because there isn't any homeSection
+// Not ideal for scalability but this is a small website
+if (homeSection) {
+  observer.observe(homeSection as HTMLElement);
+  observer.observe(featureSection as HTMLElement);
+  observer.observe(descriptionSection as HTMLElement);
+  observer.observe(autonomySection as HTMLElement);
+  observer.observe(usecaseSection as HTMLElement);
+  observer.observe(contactSection as HTMLElement);
+}
