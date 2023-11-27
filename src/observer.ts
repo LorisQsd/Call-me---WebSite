@@ -1,6 +1,6 @@
 /* eslint-disable no-restricted-syntax */
 const headerElement = document.getElementById('header');
-const navlinks = headerElement?.querySelectorAll('#navlink');
+const navlinks = headerElement?.querySelectorAll('a');
 
 // SECTIONS SELECTORS
 const homeSection = document.getElementById('home');
